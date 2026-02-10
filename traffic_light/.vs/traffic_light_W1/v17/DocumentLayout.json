@@ -1,0 +1,38 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ibanulsdiaz\\Downloads\\traffic_light\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57FA11FB-A500-4F1E-8135-FFE9F06EF545}|..\\..\\Documents\\TcXaeShell\\hola\\hola\\Untitled1\\Untitled1.plcproj|C:\\Users\\ibanulsdiaz\\Documents\\TcXaeShell\\hola\\hola\\Untitled1\\POUs\\MAIN.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{94c070b9-db0b-4415-9311-bac4eef266f5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MAIN",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Documents\\TcXaeShell\\hola\\hola\\Untitled1\\POUs\\MAIN.TcPOU",
+              "RelativeDocumentMoniker": "..\\..\\Documents\\TcXaeShell\\hola\\hola\\Untitled1\\POUs\\MAIN.TcPOU",
+              "ToolTip": "MAIN [traffic_light.Untitled1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-10T11:45:39.909Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
