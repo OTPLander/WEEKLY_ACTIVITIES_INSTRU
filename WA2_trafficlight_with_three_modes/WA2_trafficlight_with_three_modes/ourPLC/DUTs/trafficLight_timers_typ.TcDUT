@@ -15,6 +15,7 @@ STRUCT
 	maxtime_GREEN: TIME := T#3S;
 	maxtime_RED: TIME := T#3S;
 	maxtime_YELLOW: TIME := T#1S;
+	
 	maxtime_BLINK: TIME := T#1S;
 	maxtime_EMERGENCY: TIME := T#1S;
 	

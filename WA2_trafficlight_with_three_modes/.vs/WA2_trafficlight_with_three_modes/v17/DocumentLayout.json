@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Temp\\WA2_trafficlight_with_three_modes\\",
+  "WorkspaceRootPath": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
       "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
-      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
       "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
       "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
+      "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}",
       "RelativeMoniker": "D:0:0:{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}|WA2_trafficlight_with_three_modes\\ourPLC\\ourPLC.plcproj|solutionrelative:WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT||{CFF47BB1-5559-4BDE-A2AF-06B30BC64F6C}"
     }
   ],
@@ -54,9 +54,9 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "trafficLight_outputs_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_outputs_typ.TcDUT",
               "ToolTip": "trafficLight_outputs_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -65,9 +65,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "trafficLight_inputs_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_inputs_typ.TcDUT",
               "ToolTip": "trafficLight_inputs_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -76,9 +76,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "trafficLight_timers_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_timers_typ.TcDUT",
               "ToolTip": "trafficLight_timers_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -89,7 +89,7 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MAIN",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\POUs\\MAIN.TcPOU",
               "ToolTip": "MAIN [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -98,9 +98,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "trafficLight_state_enum",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_state_enum.TcDUT",
               "ToolTip": "trafficLight_state_enum [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -109,9 +109,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "trafficlight_state_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_state_typ.TcDUT",
               "ToolTip": "trafficlight_state_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -120,9 +120,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "trafficLight_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_typ.TcDUT",
               "ToolTip": "trafficLight_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -131,9 +131,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "trafficlight_transitions_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_transitions_typ.TcDUT",
               "ToolTip": "trafficlight_transitions_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -146,9 +146,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "trafficLight_counters_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficLight_counters_typ.TcDUT",
               "ToolTip": "trafficLight_counters_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -159,7 +159,7 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "trafficlight_cmds_typ",
-              "DocumentMoniker": "C:\\Temp\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT",
+              "DocumentMoniker": "C:\\Users\\ibanulsdiaz\\Desktop\\WEEKLY_ACTIVITIES_INSTRU\\WA2_trafficlight_with_three_modes\\WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT",
               "RelativeDocumentMoniker": "WA2_trafficlight_with_three_modes\\ourPLC\\DUTs\\trafficlight_cmds_typ.TcDUT",
               "ToolTip": "trafficlight_cmds_typ [WA2_trafficlight_with_three_modes.ourPLC]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
