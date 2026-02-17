@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficLight_counters_typ" Id="{075ad76c-e6c4-45ac-90a7-2ad067810142}">
+    <Declaration><![CDATA[TYPE trafficLight_counters_typ :
+STRUCT
+	timerGreen   : TON; // Timer para la luz verde
+    timerYellow   : TON; // Timer para la luz ámbar
+    timerRed    : TON; // Timer para la luz roja
+	timerBlink :TON;
+	timerconfig1 : TON;
+	timerconfig2 : TON;
+	timerconfig3 : TON;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

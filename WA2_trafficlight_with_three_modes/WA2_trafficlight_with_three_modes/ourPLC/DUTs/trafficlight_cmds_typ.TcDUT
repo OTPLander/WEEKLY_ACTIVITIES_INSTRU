@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficlight_cmds_typ" Id="{ff8fa796-6080-4a60-8bbf-0db3155f42a5}">
+    <Declaration><![CDATA[TYPE trafficlight_cmds_typ :
+STRUCT
+	cmdStart:BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

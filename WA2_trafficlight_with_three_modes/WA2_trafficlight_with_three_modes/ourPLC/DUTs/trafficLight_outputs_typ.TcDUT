@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficLight_outputs_typ" Id="{f94063db-5c4e-449d-8644-d1bfc9b16986}">
+    <Declaration><![CDATA[TYPE trafficLight_outputs_typ :
+STRUCT
+	REDlight AT %Q*: BOOL;
+	GREENlight AT %Q*: BOOL;
+	YELLOWlight AT %Q*: BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficLight_timers_typ" Id="{05c23acc-e002-4120-97f5-9c92b139b50b}">
+    <Declaration><![CDATA[TYPE trafficLight_timers_typ :
+STRUCT
+	TON_GREEN: TON;
+	TON_RED: TON;
+	TON_YELLOW: TON;
+	TON_EMERGENCY: TON;
+	TON_BLINK: TON;
+	TON_CONFIG1: TON;
+	TON_CONFIG2: TON;
+	TON_CONFIG3: TON;
+	
+	maxtime_GREEN: TIME := T#3S;
+	maxtime_RED: TIME := T#3S;
+	maxtime_YELLOW: TIME := T#1S;
+	maxtime_BLINK: TIME := T#1S;
+	maxtime_EMERGENCY: TIME := T#1S;
+	
+	elapsedTime: TIME;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

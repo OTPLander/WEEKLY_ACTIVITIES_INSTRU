@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficLight_state_enum" Id="{e8fa70bf-09cd-46fa-b662-98ad8457cee7}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE trafficLight_state_enum :
+(
+	A1_DISCONNECTED := 0,
+	F1_stYELLOW := 1,
+	F1_stRED := 2,
+	F1_stGREEN := 3,
+	F2_stBLINKon := 4,
+	F2_stBLINKoff := 5,
+	F6_stYELLOW := 6,
+	F6_stRED :=7,
+	F6_stGREEN :=8
+);
+END_TYPE
+
+
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

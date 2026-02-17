@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficLight_typ" Id="{041f2595-3027-4fc0-80e8-fecfb9f5995b}">
+    <Declaration><![CDATA[TYPE trafficLight_typ :
+STRUCT
+	
+	state: trafficLight_state_typ;
+	timers: trafficLight_timers_typ;
+	counters: trafficLight_counters_typ;
+	outputs: trafficLight_outputs_typ;
+	cmds:trafficLight_cmds_typ;
+	transitions: trafficLight_transitions_typ;
+	inputs: trafficLight_inputs_typ;
+	
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

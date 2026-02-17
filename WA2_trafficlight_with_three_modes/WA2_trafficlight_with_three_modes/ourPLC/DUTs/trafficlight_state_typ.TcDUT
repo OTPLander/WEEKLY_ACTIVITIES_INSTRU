@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <DUT Name="trafficlight_state_typ" Id="{ea084761-31fd-483c-a617-982d5c5cf0eb}">
+    <Declaration><![CDATA[TYPE trafficlight_state_typ :
+STRUCT
+	state: trafficLight_state_enum := trafficLight_state_enum.A1_DISCONNECTED;
+	state_str: STRING := 'stDisabled';
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
