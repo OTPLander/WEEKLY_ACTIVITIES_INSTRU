@@ -15,9 +15,18 @@ VAR
 	delay1: BOOL;
 	delay2: BOOL;
 	delay3: BOOL;
+	
+	RTRIG_iRed : R_TRIG;
+	RTRIG_iGreen : R_TRIG;
+	
+	
+	
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CASE mytrafficlight.state.state OF
+      <ST><![CDATA[RTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
+RTRIG_iGreen(CLK := mytrafficlight.inputs.iGreen);
+
+CASE mytrafficlight.state.state OF
     trafficLight_state_enum.A1_DISCONNECTED:
 	
 		IF mytrafficlight.inputs.iSwitchOn THEN 

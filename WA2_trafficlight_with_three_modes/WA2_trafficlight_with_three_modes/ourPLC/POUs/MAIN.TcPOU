@@ -27,10 +27,10 @@ CASE mytrafficlight.state.state OF
         mytrafficlight.state.state_str := 'stDISABLED'; 
         
 		updateOutput(mytrafficlight:=mytrafficlight);
-		
-		mytrafficlight.timers.maxtime_GREEN := T#3S;
-		mytrafficlight.timers.maxtime_RED := T#3S;
-		mytrafficlight.timers.maxtime_YELLOW := T#3S;
+			
+		mytrafficlight.timers.maxtime_GREEN := T#1S;
+		mytrafficlight.timers.maxtime_RED := T#1S;
+		mytrafficlight.timers.maxtime_YELLOW := T#1S;
 		
 		updateState(mytrafficlight:=mytrafficlight);
         
