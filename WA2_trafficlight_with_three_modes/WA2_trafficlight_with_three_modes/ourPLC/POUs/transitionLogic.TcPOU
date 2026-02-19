@@ -7,10 +7,10 @@ VAR_IN_OUT
     mytrafficlight : trafficLight_typ;
 END_VAR
 VAR
-	initPhase: TIME;
+	initPhase: TIME;          // To save the start counting time
 
-	FTRIG_iRed : F_TRIG;
-	RTRIG_iGreen : R_TRIG;
+	FTRIG_iRed : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_iGreen : R_TRIG;   // Detect the rising edge of the green button
 
 END_VAR]]></Declaration>
     <Implementation>
@@ -27,8 +27,8 @@ CASE mytrafficlight.state.state OF
     trafficLight_state_enum.F2_stBLINKon:
 	
 		IF mytrafficlight.inputs.iSwitchOff THEN 
-		mytrafficlight.timers.TON_BLINK(IN := FALSE); 
-		mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
+			mytrafficlight.timers.TON_BLINK(IN := FALSE); 
+			mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
 		ELSIF mytrafficlight.timers.TON_BLINK.Q THEN
 			mytrafficlight.timers.TON_BLINK(IN := FALSE); 
 			mytrafficlight.state.state := trafficLight_state_enum.F2_stBLINKoff;
@@ -41,8 +41,8 @@ CASE mytrafficlight.state.state OF
     trafficLight_state_enum.F2_stBLINKoff:
 	
 		IF mytrafficlight.inputs.iSwitchOff THEN 
-		mytrafficlight.timers.TON_BLINK(IN := FALSE);
-		mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
+			mytrafficlight.timers.TON_BLINK(IN := FALSE);
+			mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
 		ELSIF mytrafficlight.timers.TON_BLINK.Q THEN
 			mytrafficlight.timers.TON_BLINK(IN := FALSE); 
 			mytrafficlight.state.state := trafficLight_state_enum.F2_stBLINKon;

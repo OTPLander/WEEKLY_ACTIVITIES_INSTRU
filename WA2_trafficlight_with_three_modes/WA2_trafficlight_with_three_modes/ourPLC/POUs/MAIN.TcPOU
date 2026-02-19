@@ -1,18 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MAIN" Id="{670da788-49f9-466f-b35c-dffe0ffc1692}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM MAIN
+    <Declaration><![CDATA[//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+/////// Students: Iñigo Bañuls - Lander Nieto - Ruud Rohan ///////
+/////// Subject: AUTOMATION AND INDUSTRIAL INSTRUMENTATION ///////
+///////////////////// 19th of February, 2026 /////////////////////
+/////////////////////// WEAKLY ACTIVITY 2: ///////////////////////
+/////// TRAFFIC LIGHT WITH THREE MODES IN STRUCTURED TEST ////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+PROGRAM MAIN
 VAR
-	mytrafficlight: trafficLight_typ;
-
-	updateOutput: outHandler;
-	updateState : transitionLogic;
-	
+	mytrafficlight: trafficLight_typ;      // DATA STRUCT
+	updateOutput: outHandler;              // FUNCTION BLOCK: Updates our three outputs
+	updateState : transitionLogic;         // FUNCTION BLOCK: Uptades the state of the state machine
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-CASE mytrafficlight.state.state OF
+      <ST><![CDATA[CASE mytrafficlight.state.state OF
 
     trafficLight_state_enum.A1_DISCONNECTED: 
         mytrafficlight.state.state_str := 'A1_DISCONNECTED'; 
@@ -25,8 +34,6 @@ CASE mytrafficlight.state.state OF
 		
 		updateState(mytrafficlight:=mytrafficlight);
         
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
     trafficLight_state_enum.F2_stBLINKon:
 	
@@ -38,7 +45,6 @@ CASE mytrafficlight.state.state OF
 		
 		updateState(mytrafficlight:=mytrafficlight);
 		
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
     trafficLight_state_enum.F2_stBLINKoff:
 		mytrafficlight.state.state_str := 'F2_stBLINKoff';
@@ -49,7 +55,6 @@ CASE mytrafficlight.state.state OF
 		
 		updateState(mytrafficlight:=mytrafficlight);
 		
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stYELLOW:
         mytrafficlight.state.state_str := 'F1_stYELLOW';
 		
@@ -60,7 +65,6 @@ CASE mytrafficlight.state.state OF
         mytrafficlight.timers.TON_YELLOW(IN := TRUE, PT := mytrafficlight.timers.maxtime_YELLOW);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stRED:
         mytrafficlight.state.state_str := 'F1_stRED';
 		
@@ -70,7 +74,6 @@ CASE mytrafficlight.state.state OF
         mytrafficlight.timers.TON_RED(IN := TRUE, PT := mytrafficlight.timers.maxtime_RED);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stGREEN: 
         mytrafficlight.state.state_str := 'F1_stGREEN';
 	 
@@ -79,21 +82,17 @@ CASE mytrafficlight.state.state OF
         mytrafficlight.timers.TON_GREEN(IN := TRUE, PT := mytrafficlight.timers.maxtime_GREEN);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stYELLOW: 
 		mytrafficlight.state.state_str := 'F6_stYELLOW';
 		  
   		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stRED:
 		mytrafficlight.state.state_str := 'F6_stRED';
 		
 		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	trafficLight_state_enum.F6_stGREEN:
 	
