@@ -24,7 +24,7 @@ END_VAR
 CASE mytrafficlight.state.state OF
 
     trafficLight_state_enum.A1_DISCONNECTED: 
-        mytrafficlight.state.state_str := 'stDISABLED'; 
+        mytrafficlight.state.state_str := 'A1_DISCONNECTED'; 
         
 		updateOutput(mytrafficlight:=mytrafficlight);
 			
@@ -39,7 +39,7 @@ CASE mytrafficlight.state.state OF
 	
     trafficLight_state_enum.F2_stBLINKon:
 	
-		mytrafficlight.state.state_str := 'stBLINKon';
+		mytrafficlight.state.state_str := 'F2_stBLINKon';
 		
 		updateOutput(mytrafficlight:=mytrafficlight);
 		
@@ -50,7 +50,7 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
     trafficLight_state_enum.F2_stBLINKoff:
-		mytrafficlight.state.state_str := 'stBLINKoff';
+		mytrafficlight.state.state_str := 'F2_stBLINKoff';
 		
 		updateOutput(mytrafficlight:=mytrafficlight);
 		
@@ -60,7 +60,7 @@ CASE mytrafficlight.state.state OF
 		
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stYELLOW:
-        mytrafficlight.state.state_str := 'stYELLOW';
+        mytrafficlight.state.state_str := 'F1_stYELLOW';
 		
 		
 		updateOutput(mytrafficlight:=mytrafficlight);
@@ -71,7 +71,7 @@ CASE mytrafficlight.state.state OF
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stRED:
-        mytrafficlight.state.state_str := 'stRED';
+        mytrafficlight.state.state_str := 'F1_stRED';
 		
 		
  		updateOutput(mytrafficlight:=mytrafficlight);
@@ -81,7 +81,7 @@ CASE mytrafficlight.state.state OF
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stGREEN: 
-        mytrafficlight.state.state_str := 'stGREEN';
+        mytrafficlight.state.state_str := 'F1_stGREEN';
 	 
 	 	updateOutput(mytrafficlight:=mytrafficlight);
 
@@ -90,14 +90,14 @@ CASE mytrafficlight.state.state OF
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stYELLOW: 
-		mytrafficlight.state.state_str := 'stYELLOW';
+		mytrafficlight.state.state_str := 'F6_stYELLOW';
 		  
   		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);		
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stRED:
-		mytrafficlight.state.state_str := 'stRED';
+		mytrafficlight.state.state_str := 'F6_stRED';
 		
 		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);
@@ -106,7 +106,7 @@ CASE mytrafficlight.state.state OF
 
 	trafficLight_state_enum.F6_stGREEN:
 	
-		mytrafficlight.state.state_str := 'stGREEN';
+		mytrafficlight.state.state_str := 'F6_stGREEN';
 	  
 		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);		
