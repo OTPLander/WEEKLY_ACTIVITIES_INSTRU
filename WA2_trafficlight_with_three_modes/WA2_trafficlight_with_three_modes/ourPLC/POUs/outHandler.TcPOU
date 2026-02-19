@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="outHandler" Id="{a1302bde-ba69-4292-b620-9f78d0e2d752}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK outHandler
+VAR_INPUT
+    //eCurrentState : trafficLight_state_enum;
+END_VAR
+VAR_IN_OUT
+   mytrafficlight : trafficLight_typ; // Tu estructura de datos
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// ESTO ES EL CUERPO DEL FB_TrafficOutputs
+CASE mytrafficlight.state.state OF
+    
+    trafficLight_state_enum.A1_DISCONNECTED:
+        SetOutputs(bRed:= FALSE, bYellow:= FALSE, bGreen:= FALSE,mytrafficlight);
+
+    trafficLight_state_enum.F2_stBLINKon:
+        SetOutputs(TRUE, TRUE, TRUE,mytrafficlight); // También puedes omitir los nombres de los parámetros
+
+    trafficLight_state_enum.F1_stYELLOW, 
+    trafficLight_state_enum.F6_stYELLOW:
+        SetOutputs(FALSE, TRUE, FALSE,mytrafficlight);
+
+    trafficLight_state_enum.F1_stRED, 
+    trafficLight_state_enum.F6_stRED:
+        SetOutputs(TRUE, FALSE, FALSE,mytrafficlight);
+
+    trafficLight_state_enum.F1_stGREEN, 
+    trafficLight_state_enum.F6_stGREEN:
+        SetOutputs(FALSE, FALSE, TRUE,mytrafficlight);
+        
+    ELSE
+        SetOutputs(FALSE, FALSE, FALSE,mytrafficlight); // Seguridad: si el estado es raro, apaga todo
+END_CASE]]></ST>
+    </Implementation>
+    <Method Name="SetOutputs" Id="{0501918d-8956-4c53-b122-deb1680c2652}">
+      <Declaration><![CDATA[METHOD SetOutputs
+VAR_INPUT
+    bRed    : BOOL;
+    bYellow : BOOL;
+    bGreen  : BOOL;
+END_VAR
+VAR_INPUT
+    // Pasamos la referencia para evitar el error C0371
+    mytrafficlight : REFERENCE TO trafficLight_typ; 
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[mytrafficlight.outputs.REDlight    := bRed;
+mytrafficlight.outputs.YELLOWlight := bYellow;
+mytrafficlight.outputs.GREENlight  := bGreen;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

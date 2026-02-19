@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="transitionLogic" Id="{c89798f5-47a8-4f8c-b79f-5bc9758787d8}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC transitionLogic
+
+VAR_IN_OUT
+    mytrafficlight : trafficLight_typ;
+END_VAR
+VAR
+
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE mytrafficlight.state.state OF
+    trafficLight_state_enum.A1_DISCONNECTED:
+
+        
+    trafficLight_state_enum.F2_stBLINKon:
+
+        
+    trafficLight_state_enum.F2_stBLINKoff:
+
+    trafficLight_state_enum.F1_stYELLOW:
+
+    trafficLight_state_enum.F1_stRED:
+
+    trafficLight_state_enum.F1_stGREEN:
+
+    trafficLight_state_enum.F6_stYELLOW:
+
+    trafficLight_state_enum.F6_stRED:
+
+    trafficLight_state_enum.F6_stGREEN:
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

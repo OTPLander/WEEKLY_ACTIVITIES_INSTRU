@@ -14,6 +14,7 @@ VAR
 	
 	initPhase : TIME;
 
+	updateOutput: outHandler;
 	
 END_VAR
 ]]></Declaration>
@@ -24,9 +25,7 @@ CASE mytrafficlight.state.state OF
     trafficLight_state_enum.A1_DISCONNECTED: 
         mytrafficlight.state.state_str := 'stDISABLED'; 
         
-        mytrafficlight.outputs.REDlight := FALSE; 
-        mytrafficlight.outputs.GREENlight := FALSE; 
-        mytrafficlight.outputs.YELLOWlight := FALSE;
+		updateOutput(mytrafficlight:=mytrafficlight);
 		
 		mytrafficlight.timers.maxtime_GREEN := T#3S;
 		mytrafficlight.timers.maxtime_RED := T#3S;
@@ -34,15 +33,17 @@ CASE mytrafficlight.state.state OF
         
         IF mytrafficlight.inputs.iSwitchOn THEN 
             mytrafficlight.state.state := trafficLight_state_enum.F2_stBLINKon;
-        END_IF; // Asegúrate de que tenga el punto y coma aquí
+        END_IF; 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
     trafficLight_state_enum.F2_stBLINKon:
+	
 		mytrafficlight.state.state_str := 'stBLINKon';
-        mytrafficlight.outputs.YELLOWlight := TRUE;
-        mytrafficlight.outputs.REDlight := TRUE;
-        mytrafficlight.outputs.GREENlight := TRUE;
+		
+		updateOutput(mytrafficlight:=mytrafficlight);
+		
 		mytrafficlight.timers.TON_BLINK(IN := TRUE, PT := T#1S);
+		
 		IF mytrafficlight.inputs.iSwitchOff THEN 
 			mytrafficlight.timers.TON_BLINK(IN := FALSE); 
             mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
@@ -58,9 +59,8 @@ CASE mytrafficlight.state.state OF
 	
     trafficLight_state_enum.F2_stBLINKoff:
 		mytrafficlight.state.state_str := 'stBLINKoff';
-        mytrafficlight.outputs.YELLOWlight := FALSE;
-        mytrafficlight.outputs.REDlight := FALSE;
-        mytrafficlight.outputs.GREENlight := FALSE;
+		
+		updateOutput(mytrafficlight:=mytrafficlight);
 		
 		mytrafficlight.timers.TON_BLINK(IN := TRUE, PT := T#1S);
 		
@@ -78,11 +78,13 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stYELLOW:
         mytrafficlight.state.state_str := 'stYELLOW';
-        mytrafficlight.outputs.YELLOWlight := TRUE;
-        mytrafficlight.outputs.REDlight := FALSE;
-        mytrafficlight.outputs.GREENlight := FALSE;
+		
+		
+		updateOutput(mytrafficlight:=mytrafficlight);
+		
 
         mytrafficlight.timers.TON_YELLOW(IN := TRUE, PT := mytrafficlight.timers.maxtime_YELLOW);
+		
 		IF mytrafficlight.inputs.iRed=FALSE THEN 
             delayY := TRUE;
         END_IF;
@@ -101,11 +103,12 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stRED:
         mytrafficlight.state.state_str := 'stRED';
-        mytrafficlight.outputs.REDlight := TRUE;
-        mytrafficlight.outputs.YELLOWlight := FALSE;
-        mytrafficlight.outputs.GREENlight := FALSE;
+		
+		
+ 		updateOutput(mytrafficlight:=mytrafficlight);
 		
         mytrafficlight.timers.TON_RED(IN := TRUE, PT := mytrafficlight.timers.maxtime_RED);
+		
 		IF mytrafficlight.inputs.iRed=FALSE THEN 
             delayR := TRUE;
         END_IF;
@@ -124,11 +127,11 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     trafficLight_state_enum.F1_stGREEN: 
         mytrafficlight.state.state_str := 'stGREEN';
-        mytrafficlight.outputs.GREENlight := TRUE;
-        mytrafficlight.outputs.REDlight := FALSE;
-        mytrafficlight.outputs.YELLOWlight := FALSE;
+	 
+	 	updateOutput(mytrafficlight:=mytrafficlight);
 
         mytrafficlight.timers.TON_GREEN(IN := TRUE, PT := mytrafficlight.timers.maxtime_GREEN);
+		
 		IF mytrafficlight.inputs.iRed=FALSE THEN 
             delayG := TRUE;
         END_IF;
@@ -147,9 +150,8 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stYELLOW: 
 		mytrafficlight.state.state_str := 'stYELLOW';
-        mytrafficlight.outputs.YELLOWlight := TRUE;
-        mytrafficlight.outputs.REDlight := FALSE;
-        mytrafficlight.outputs.GREENlight := FALSE;
+		  
+  		updateOutput(mytrafficlight:=mytrafficlight);
 		
 		IF mytrafficlight.inputs.iswitchoff THEN 
              mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
@@ -168,15 +170,10 @@ CASE mytrafficlight.state.state OF
         END_IF;
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	trafficLight_state_enum.F6_stRED:
-	mytrafficlight.state.state_str := 'stRED';
-        mytrafficlight.outputs.YELLOWlight := FALSE;
-        mytrafficlight.outputs.REDlight := TRUE;
-        mytrafficlight.outputs.GREENlight := FALSE;
+		mytrafficlight.state.state_str := 'stRED';
 		
-		
-		
-		
-		
+		updateOutput(mytrafficlight:=mytrafficlight);
+
 		IF mytrafficlight.inputs.iRed=FALSE THEN 
             delay2 := TRUE;
         END_IF;
@@ -195,10 +192,10 @@ CASE mytrafficlight.state.state OF
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	trafficLight_state_enum.F6_stGREEN:
+	
 		mytrafficlight.state.state_str := 'stGREEN';
-        mytrafficlight.outputs.YELLOWlight := FALSE;
-        mytrafficlight.outputs.REDlight := FALSE;
-        mytrafficlight.outputs.GREENlight := TRUE;
+	  
+		updateOutput(mytrafficlight:=mytrafficlight);
 		
 		IF mytrafficlight.inputs.iswitchoff THEN 
              mytrafficlight.state.state := trafficLight_state_enum.A1_DISCONNECTED;
