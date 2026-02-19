@@ -38,7 +38,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}" Name="ourPLC" PrjFilePath="ourPLC\ourPLC.plcproj" TmcFilePath="ourPLC\ourPLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{62C55A20-5753-5E06-D37C-D1ED2FB8CA2E}" TmcPath="ourPLC\ourPLC.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{E57D4CE6-DD6C-6EF4-4AB8-9C09F8432E5B}" TmcPath="ourPLC\ourPLC.tmc">
 					<Name>ourPLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">

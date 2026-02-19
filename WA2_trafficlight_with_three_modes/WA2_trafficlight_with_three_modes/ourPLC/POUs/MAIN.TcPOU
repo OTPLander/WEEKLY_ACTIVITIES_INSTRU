@@ -21,7 +21,18 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CASE mytrafficlight.state.state OF
+      <ST><![CDATA[
+IF mytrafficlight.inputs.iGreen THEN
+	VisuElems.CURRENTVISU := 'MiPrimeraPantalla';
+ELSE  
+	VisuElems.CURRENTVISU := 'Visualization';		
+END_IF
+
+
+
+
+
+CASE mytrafficlight.state.state OF
 
     trafficLight_state_enum.A1_DISCONNECTED: 
         mytrafficlight.state.state_str := 'A1_DISCONNECTED'; 
