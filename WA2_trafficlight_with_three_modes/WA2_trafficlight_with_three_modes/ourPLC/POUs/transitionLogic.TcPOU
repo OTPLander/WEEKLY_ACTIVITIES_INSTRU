@@ -7,20 +7,11 @@ VAR_IN_OUT
     mytrafficlight : trafficLight_typ;
 END_VAR
 VAR
-
-	delayY: BOOL;
 	initPhase: TIME;
-	delayR: BOOL;
-	delayG: BOOL;
-	delay1: BOOL;
-	delay2: BOOL;
-	delay3: BOOL;
-	
+
 	FTRIG_iRed : F_TRIG;
 	RTRIG_iGreen : R_TRIG;
-	
-	
-	
+
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
@@ -89,7 +80,6 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stGREEN;
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_RED(IN := FALSE);
-			delayR:=FALSE;
 			initPhase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
@@ -105,7 +95,6 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW; 
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_GREEN(IN := FALSE);
-			delayG:=FALSE;
 			initPhase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
@@ -118,7 +107,6 @@ CASE mytrafficlight.state.state OF
 		
 		
 		IF FTRIG_iRed.Q  THEN 
-			delay1:=FALSE;
 			mytrafficlight.timers.maxtime_YELLOW := TIME() - initPhase;
 			initPhase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stRED;
@@ -133,7 +121,6 @@ CASE mytrafficlight.state.state OF
         END_IF;		
 		
 		IF FTRIG_iRed.Q THEN 
-			delay2:=FALSE;
 			mytrafficlight.timers.maxtime_RED := TIME() - initPhase;
 			initPhase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stGREEN;
@@ -147,7 +134,6 @@ CASE mytrafficlight.state.state OF
 		
 
 		IF FTRIG_iRed.Q THEN 
-			delay3:=FALSE;
 			mytrafficlight.timers.maxtime_GREEN := TIME() - initPhase;
 			initPhase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW;

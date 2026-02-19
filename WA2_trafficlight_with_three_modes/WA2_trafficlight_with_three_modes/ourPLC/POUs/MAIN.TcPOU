@@ -4,15 +4,6 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	mytrafficlight: trafficLight_typ;
-	delay: BOOL;
-	delay1: BOOL;
-	delay2: BOOL;
-	delay3: BOOL;
-	delayR: BOOL;
-	delayY: BOOL;
-	delayG: BOOL;
-	
-	initPhase : TIME;
 
 	updateOutput: outHandler;
 	updateState : transitionLogic;

@@ -2,11 +2,9 @@
 <TcPlcObject Version="1.1.0.1">
   <POU Name="outHandler" Id="{a1302bde-ba69-4292-b620-9f78d0e2d752}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK outHandler
-VAR_INPUT
-    //eCurrentState : trafficLight_state_enum;
-END_VAR
+
 VAR_IN_OUT
-   mytrafficlight : trafficLight_typ; // Tu estructura de datos
+   mytrafficlight : trafficLight_typ; 
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// ESTO ES EL CUERPO DEL FB_TrafficOutputs
