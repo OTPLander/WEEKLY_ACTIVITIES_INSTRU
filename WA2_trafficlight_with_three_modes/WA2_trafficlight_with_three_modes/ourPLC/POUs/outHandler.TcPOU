@@ -40,7 +40,7 @@ VAR_INPUT
     bGreen  : BOOL;
 END_VAR
 VAR_INPUT
-    // Pasamos la referencia para evitar el error C0371
+    
     mytrafficlight : REFERENCE TO trafficLight_typ; 
 END_VAR]]></Declaration>
       <Implementation>
