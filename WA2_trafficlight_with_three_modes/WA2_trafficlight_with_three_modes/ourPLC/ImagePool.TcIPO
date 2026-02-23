@@ -4,28 +4,38 @@
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="ImagePoolObject">
-          <v n="UniqueIdGenerator">"5"</v>
+          <v n="UniqueIdGenerator">"12"</v>
           <l n="BitmapPool" t="ArrayList" cet="ImagePoolItem">
             <o>
               <v n="BitmapID">"7882-errenteria_400px"</v>
               <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|images\7882-errenteria_400px.jpg"</v>
-              <v n="ItemID">1</v>
+              <v n="ItemID">6</v>
             </o>
             <o>
               <v n="BitmapID">"pngtree-traffic-lights-clipart-design-png-image_5766018"</v>
               <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|images\pngtree-traffic-lights-clipart-design-png-image_5766018.png"</v>
-              <v n="ItemID">2</v>
+              <v n="ItemID">7</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Gemini_Generated_Image_ydb6ngydb6ngydb6"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|images\Gemini_Generated_Image_ydb6ngydb6ngydb6.png"</v>
+              <v n="ItemID">8</v>
+            </o>
+            <o>
+              <v n="BitmapID">"Gemini_Generated_Image_6byr8p6byr8p6byr - copia"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|images\Gemini_Generated_Image_6byr8p6byr8p6byr - copia.png"</v>
+              <v n="ItemID">9</v>
             </o>
             <o>
               <v n="BitmapID">""</v>
               <v n="FileID">""</v>
-              <v n="ItemID">4</v>
+              <v n="ItemID">11</v>
             </o>
           </l>
           <v n="GuidInit">{61c523bc-bcf8-473c-8307-a8f12302d101}</v>
           <v n="GuidReInit">{baaf9f60-44a1-4097-ab50-d855d6e48d30}</v>
           <v n="GuidExitX">{7cb004f8-41dc-46c2-9053-66040c3c06b5}</v>
-          <v n="ValidIds">false</v>
+          <v n="ValidIds">true</v>
         </o>
       </Data>
       <TypeList>

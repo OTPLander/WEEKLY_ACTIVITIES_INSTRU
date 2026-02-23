@@ -18,6 +18,9 @@ VAR
 	mytrafficlight: trafficLight_typ;      // DATA STRUCT
 	updateOutput: outHandler;              // FUNCTION BLOCK: Updates our three outputs
 	updateState : transitionLogic;         // FUNCTION BLOCK: Uptades the state of the state machine
+	boolEUS : BOOL;
+	boolENG : BOOL;
+	boolCAT : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

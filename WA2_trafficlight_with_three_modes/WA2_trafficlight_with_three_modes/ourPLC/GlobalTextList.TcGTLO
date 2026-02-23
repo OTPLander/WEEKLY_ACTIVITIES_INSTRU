@@ -6,17 +6,74 @@
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"152"</v>
+              <v n="TextDefault">"CATALÀ"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"282"</v>
+              <v n="TextDefault">"CATALÁ"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"404"</v>
+              <v n="TextDefault">"DISCONNECT"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"287"</v>
+              <v n="TextDefault">"ENGLSH"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"518"</v>
+              <v n="TextDefault">"EUSKERA"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
               <v n="TextID">"793"</v>
               <v n="TextDefault">"ON SWITCH"</v>
-              <l n="LanguageTexts" t="ArrayList" />
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v>llibertat presos polítics</v>
+                <v></v>
+              </l>
             </o>
             <o>
               <v n="TextID">"364"</v>
               <v n="TextDefault">"TRAFFIC LIGHT HMI"</v>
-              <l n="LanguageTexts" t="ArrayList" />
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>trafikoa</v>
+                <v>Semàfor</v>
+                <v></v>
+              </l>
             </o>
           </l>
-          <l n="Languages" t="ArrayList" />
+          <l n="Languages" t="ArrayList" cet="String">
+            <v>EUSKERA</v>
+            <v>CATALÀ</v>
+            <v>ENGLISH</v>
+          </l>
           <v n="GuidInit">{9b01cfe7-825f-4ed1-b87e-63ca963324f0}</v>
           <v n="GuidReInit">{ed4d9355-6c7c-4f44-b1c8-e09e2fa685d0}</v>
           <v n="GuidExitX">{01225d70-f07d-430a-a050-8d53e77c6520}</v>
