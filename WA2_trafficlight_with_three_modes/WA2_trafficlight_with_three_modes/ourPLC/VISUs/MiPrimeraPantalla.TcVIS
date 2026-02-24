@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"102"</v>
+          <v n="UniqueIdGenerator">"108"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -1036,9 +1036,9 @@
                         </o>
                       </l>
                     </o>
-                    <v n="SignatureName">"Visu_ToggleInput"</v>
-                    <v n="Name">"Toggle"</v>
-                    <v n="Description">"Configure the toggling of a Boolean variable"</v>
+                    <v n="SignatureName">"Visu_TapInput"</v>
+                    <v n="Name">"Tap"</v>
+                    <v n="Description">"Configure the tapping of a Boolean variable"</v>
                   </o>
                 </a>
                 <l n="Elements" t="ArrayList" />
@@ -2527,7 +2527,7 @@ MAIN.boolEUS := FALSE;"</v>
             </o>
             <v n="DialogDut">{0f418d17-cdbc-42f8-9823-6ac8d6acf186}</v>
           </o>
-          <v n="LastUsedIdForIdentifier">33</v>
+          <v n="LastUsedIdForIdentifier">41</v>
           <o n="TextDocument" t="TextDocument">
             <v n="TextBlobForSerialisation">"VAR_IN_OUT
 	

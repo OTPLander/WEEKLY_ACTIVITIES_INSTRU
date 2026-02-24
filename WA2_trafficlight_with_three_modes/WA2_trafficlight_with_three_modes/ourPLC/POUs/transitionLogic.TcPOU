@@ -48,6 +48,15 @@ IF RTRIG_iGreenINPUT.Q THEN
 	END_IF	
 END_IF
 
+IF FTRIG_iRedINPUT.Q THEN
+	IF FTRIG_iRed.Q THEN
+		mytrafficlight.inputs.iRed := FALSE;
+	ELSE
+		mytrafficlight.inputs.iRed := TRUE;
+		
+	END_IF	
+END_IF
+
 
 
 
