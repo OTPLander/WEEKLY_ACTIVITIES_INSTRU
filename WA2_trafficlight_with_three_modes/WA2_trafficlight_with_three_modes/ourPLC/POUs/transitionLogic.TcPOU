@@ -12,10 +12,61 @@ VAR
 	FTRIG_iRed : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
 	RTRIG_iGreen : R_TRIG;   // Detect the rising edge of the green button
 
+
+	FTRIG_iRedINPUT : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_iGreenINPUT : R_TRIG;   // Detect the rising edge of the green button
+	
+	FTRIG_SWITCH : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_SWITCH : R_TRIG;   // Detect the rising edge of the green button
+	
+
+	mySwitchState: BOOL;
+	bChangeHMI: BOOL;
+	HMI_Switch: BOOL;
+	HMI_Switch_Old: BOOL;
+	bChangePLC: BOOL;
+	PLC_Switch: BOOL;
+	PLC_Switch_Old: BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
 RTRIG_iGreen(CLK := mytrafficlight.inputs.iGreen);
+
+FTRIG_iRedINPUT(CLK := mytrafficlight.inputs.iRedINPUT);
+RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
+
+FTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
+RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
+
+
+IF RTRIG_iGreenINPUT.Q THEN
+	IF RTRIG_iGreen.Q THEN
+		mytrafficlight.inputs.iGreen := FALSE;
+	ELSE
+		mytrafficlight.inputs.iGreen := TRUE;
+		
+	END_IF	
+END_IF
+
+
+
+
+(* Detectar cambio en HMI *)
+bChangeHMI := HMI_Switch XOR HMI_Switch_Old;
+HMI_Switch_Old := HMI_Switch;
+
+(* Detectar cambio en PLC *)
+bChangePLC := mytrafficlight.inputs.iSwitchOnINPUT XOR PLC_Switch_Old;
+PLC_Switch_Old := mytrafficlight.inputs.iSwitchOnINPUT;
+
+(* Si cualquiera cambia, hacer toggle *)
+IF bChangeHMI OR bChangePLC THEN
+	mySwitchState := NOT mySwitchState;
+END_IF;
+
+(* Actualizar salidas reales *)
+mytrafficlight.inputs.iSwitchOn  := mySwitchState;
+mytrafficlight.inputs.iSwitchOff := NOT mySwitchState;
 
 CASE mytrafficlight.state.state OF
     trafficLight_state_enum.A1_DISCONNECTED:

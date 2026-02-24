@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"93"</v>
+          <v n="UniqueIdGenerator">"102"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -1462,7 +1462,7 @@
                       <l n="VisualElemMemberList" t="VisualElemMemberCollection" cet="VisualElemMember">
                         <o>
                           <v n="Id">1186196937L</v>
-                          <v n="Value">"MAIN.boolEUS"</v>
+                          <v n="Value">"MAIN.updateState.HMI_Switch"</v>
                         </o>
                       </l>
                     </o>
@@ -1665,17 +1665,7 @@
                 <v n="VisualElementIdentifier">"GenElemInst_23"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="ChangeVisuInputAction[]">
-                  <v>OnMouseClick</v>
-                  <a cet="ChangeVisuInputAction">
-                    <o>
-                      <v n="AssignExpr">""</v>
-                      <n n="Assign" />
-                      <v n="Assign33">"Visualization"</v>
-                      <v n="Type" t="ChangeVisuType">Assignment</v>
-                    </o>
-                  </a>
-                </d>
+                <d n="VisualElementInputActions" t="Hashtable" />
                 <v n="VisualElementIdentification">{3878a8b1-9021-4c9d-af08-31e36cf5c9b0}</v>
                 <v n="VisualElementOwningObjectGuid">{438d3a89-436e-454b-9d50-699fc3e0c00f}</v>
                 <a n="LMGuids" et="Guid" />
@@ -2112,7 +2102,7 @@ MAIN.boolEUS := TRUE;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_29"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="ChangeLanguageInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="ChangeLanguageInputAction">
                     <o>
@@ -2587,9 +2577,7 @@ END_VAR"</v>
         <Type n="Byte">System.Byte</Type>
         <Type n="CaseInsensitiveHashtable">{7df88604-7ac5-4e36-91c4-55e4fdad3e68}</Type>
         <Type n="ChangeLanguageInputAction">{0b465b1a-56f7-4156-af53-ee076758cd13}</Type>
-        <Type n="ChangeVisuInputAction">{b4c3a27b-74e5-4a67-bfa9-12f8c8cda31f}</Type>
-        <Type n="ChangeVisuInputAction[]">_3S.CoDeSys.VisualElem.ChangeVisuInputAction[], VisualElem.plugin, Version=4.8.0.0, Culture=neutral, PublicKeyToken=null</Type>
-        <Type n="ChangeVisuType">{a418300c-fdec-47d4-86a4-53b5a5f941fa}</Type>
+        <Type n="ChangeLanguageInputAction[]">_3S.CoDeSys.VisualElem.ChangeLanguageInputAction[], VisualElem.plugin, Version=4.8.0.0, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="ComplexInput">{1de566f6-72a7-494c-9353-9a418172c96e}</Type>
         <Type n="Double">System.Double</Type>
         <Type n="GeneratedLanguageModelEntriesData">{703465dc-4679-4ff2-bcc3-c57d0a204da3}</Type>

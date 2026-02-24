@@ -13,7 +13,7 @@
 	"HandleTouchEvents": true,
 	"ScaleTypeIsotropic": false,
 	"BestFitForDialogs": true,
-	"RuntimeVersion": "3.5.20.30",
+	"RuntimeVersion": "3.5.21.10",
 	"LoginVisu": "",
 	"FillBackground": true,
 	"LoginVisuTexts": "",

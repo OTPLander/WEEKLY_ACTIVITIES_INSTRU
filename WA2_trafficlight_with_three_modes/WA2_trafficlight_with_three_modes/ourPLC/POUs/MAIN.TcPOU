@@ -25,11 +25,11 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-IF mytrafficlight.inputs.iGreen THEN
-	VisuElems.CURRENTVISU := 'MiPrimeraPantalla';
-ELSE  
-	VisuElems.CURRENTVISU := 'Visualization';		
-END_IF
+//IF mytrafficlight.inputs.iGreen THEN
+//	VisuElems.CURRENTVISU := 'MiPrimeraPantalla';
+//ELSE  
+//	VisuElems.CURRENTVISU := 'Visualization';		
+//END_IF
 
 
 
