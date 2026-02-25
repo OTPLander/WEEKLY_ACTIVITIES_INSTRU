@@ -21,6 +21,10 @@ VAR
 	boolEUS : BOOL;
 	boolENG : BOOL;
 	boolCAT : BOOL;
+	
+	test : BOOL;
+	testt : TIME;
+	testtt : string;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -31,7 +35,13 @@ END_VAR
 //	VisuElems.CURRENTVISU := 'Visualization';		
 //END_IF
 
+IF test THEN
+	test := FALSE;
+	testt := TIME();
+	
+END_IF
 
+testtt:= UINT_TO_STRING(TO_UINT(TIME() - testt));
 
 
 

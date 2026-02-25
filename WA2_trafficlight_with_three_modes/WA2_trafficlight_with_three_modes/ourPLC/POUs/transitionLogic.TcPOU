@@ -27,6 +27,8 @@ VAR
 	bChangePLC: BOOL;
 	PLC_Switch: BOOL;
 	PLC_Switch_Old: BOOL;
+	
+	time_display : TIME;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
@@ -38,6 +40,8 @@ RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
 FTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
 RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
 
+
+time_display := initPhase - TIME();
 
 IF RTRIG_iGreenINPUT.Q THEN
 	IF RTRIG_iGreen.Q THEN
