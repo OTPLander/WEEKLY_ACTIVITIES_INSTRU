@@ -20,6 +20,12 @@ VAR
 	RTRIG_SWITCH : R_TRIG;   // Detect the rising edge of the green button
 	
 
+	
+	FTRIG_iRedHMI : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_iGreenHMI : R_TRIG;   // Detect the rising edge of the green button
+	
+	
+
 	mySwitchState: BOOL;
 	bChangeHMI: BOOL;
 	HMI_Switch: BOOL;
@@ -31,8 +37,12 @@ VAR
 	time_display : TIME;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
+      <ST><![CDATA[FTRIG_iRedHMI(CLK := mytrafficlight.inputs.iHMIred);
+RTRIG_iGreenHMI(CLK := mytrafficlight.inputs.iHMIGreen);
+
+FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
 RTRIG_iGreen(CLK := mytrafficlight.inputs.iGreen);
+
 
 FTRIG_iRedINPUT(CLK := mytrafficlight.inputs.iRedINPUT);
 RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
@@ -43,24 +53,27 @@ RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
 
 time_display := initPhase - TIME();
 
-IF RTRIG_iGreenINPUT.Q THEN
-	IF RTRIG_iGreen.Q THEN
-		mytrafficlight.inputs.iGreen := FALSE;
-	ELSE
-		mytrafficlight.inputs.iGreen := TRUE;
-		
-	END_IF	
-END_IF
 
-IF FTRIG_iRedINPUT.Q THEN
-	IF FTRIG_iRed.Q THEN
-		mytrafficlight.inputs.iRed := FALSE;
-	ELSE
-		mytrafficlight.inputs.iRed := TRUE;
+IF RTRIG_iGreen.Q OR RTRIG_iGreenINPUT.Q THEN
+	
+			mytrafficlight.inputs.iGreen := TRUE;
 		
-	END_IF	
+ELSE
+			mytrafficlight.inputs.iGreen := FALSE;
+			
 END_IF
+	
+	
 
+IF FTRIG_iRed.Q OR FTRIG_iRedINPUT.Q THEN
+	
+			mytrafficlight.inputs.iRed := FALSE;
+		
+ELSE
+			mytrafficlight.inputs.iRed := TRUE;
+			
+END_IF
+	
 
 
 

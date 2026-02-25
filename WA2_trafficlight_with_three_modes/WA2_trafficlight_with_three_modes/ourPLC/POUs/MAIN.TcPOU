@@ -18,6 +18,7 @@ VAR
 	mytrafficlight: trafficLight_typ;      // DATA STRUCT
 	updateOutput: outHandler;              // FUNCTION BLOCK: Updates our three outputs
 	updateState : transitionLogic;         // FUNCTION BLOCK: Uptades the state of the state machine
+	
 	boolEUS : BOOL;
 	boolENG : BOOL;
 	boolCAT : BOOL;
@@ -41,7 +42,7 @@ IF test THEN
 	
 END_IF
 
-testtt:= UINT_TO_STRING(TO_UINT(TIME() - testt));
+testtt := UINT_TO_STRING(TO_UINT(TIME() - testt));
 
 
 

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
-		<SystemId>{F4907467-5EDE-A97E-71A9-775FAD44298D}</SystemId>
-		<IssueTime>2026-02-23T14:55:00</IssueTime>
-		<ExpireTime>2026-03-03T00:00:00</ExpireTime>
-		<LicenseKey>2ec7d1cad3ac8b530a4e89a217e74434c60698f29fd420a4819ac3088aa4044e4cad4588e3d926c686aca3afaf30b506c729b616e77218ee5a5278bf763380efce9383402b8ef81e01ff3c48e0de9926f8794a3b71857645341b1c8dfa396084b0ed326efc91d4cdf13de88a96f9f4cf1599f24bd98e700c1f2a683ba4df4c977b01008b02dfac7d54932466b873e9918c205211dd502612962c2508d8bfc076618ebbf4ad478539008037b5527f56d9263fb503abe769db297ab76c0a4f301f36e6a9d824254fdf6cc2e96a7677ee18bcf8060ce7d0e77a7e7318643b5b8027f6db1f8df68707b2f2c368570f240a0dd48742083a491e2a1242cf48d34850d0</LicenseKey>
+		<SystemId>{F4A76039-EF10-B9CB-B835-97EC011463E2}</SystemId>
+		<IssueTime>2026-02-25T17:20:00</IssueTime>
+		<ExpireTime>2026-03-05T00:00:00</ExpireTime>
+		<LicenseKey>39a0d9e730de0ac51cd4fb2e2d42a3835e718c606c93d401e0e05b403dca03e89ade386d0723d48d4eef8598a8e8dbf96d7b7d055d3be7426f8d8536c74a4ae8c27cf95e02dffbce1c94550b1c46f45d593349ac14f186f2ef68a5e5876a2c1c8a1dde74feb605532dd5b108d7858f32daf45d90ed29e62f6fe49cec2286f8e2f22f138815b525b59ab1e6e1b13b2dc848b2035361e1b9560dc2dd84d37e44da7771fef0fd8683cc20b18d18304e812655d6aea59805391cb83863a0faac8d0d3aa2c729d297da0cbea8b946563e2a40c89297c4089dc2f2cd5a5b6f3ff37fcd5e71ea1639ba82df3e7ec89dba691a343a678592424c9504cecc701b58dd8a60</LicenseKey>
 		<License>
 			<LicenseId>{D4390DEA-A64D-494D-9E09-275326DBB0CB}</LicenseId>
 			<Name>TC3 PLC-HMI (RT)</Name>
@@ -20,9 +20,19 @@
 			<OrderNo>TF1810</OrderNo>
 		</License>
 		<License>
+			<LicenseId>{AB888AB9-F2E3-43AE-8FAA-E294BDCE1FEA}</LicenseId>
+			<Name>TC3 OPC UA Nodeset Editor L1</Name>
+			<OrderNo>TE6100</OrderNo>
+		</License>
+		<License>
 			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
 			<Name>TC3 ADS</Name>
 			<OrderNo>TC1000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{1BCE25DB-ABE0-43EB-9748-4778052C1017}</LicenseId>
+			<Name>TC3 OPC UA Nodeset Editor L2</Name>
+			<OrderNo>TE6101</OrderNo>
 		</License>
 		<License>
 			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>

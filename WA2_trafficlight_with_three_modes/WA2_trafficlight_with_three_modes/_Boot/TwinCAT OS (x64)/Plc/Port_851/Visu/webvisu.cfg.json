@@ -17,7 +17,7 @@
 	"LoginVisu": "",
 	"FillBackground": true,
 	"LoginVisuTexts": "",
-	"LoginVisuErrorTexts": "implicit_loginvisu_errors_textlist.txt",
+	"LoginVisuErrorTexts": "",
 	"LoginVisuNamespace": "",
 	"LoginVisuDefLang": "",
     "UseBrowserLanguage": true

@@ -8,6 +8,9 @@ STRUCT
 	iSwitchOn : BOOL;
 	iSwitchOff : BOOL;
 	
+	iHMIred: BOOL;
+	iHMIgreen: BOOL;
+
 	iRedINPUT AT %I*: BOOL;
 	iGreenINPUT AT %I*: BOOL;
 	iSwitchOnINPUT AT %I*: BOOL;
