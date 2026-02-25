@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"132"</v>
+          <v n="UniqueIdGenerator">"147"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -1623,7 +1623,7 @@
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"DISCONNECT"</v>
+                      <v n="Value">"ON/OFF"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -1655,7 +1655,7 @@
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"404"</v>
+                      <v n="Value">"512"</v>
                     </o>
                   </l>
                 </o>
@@ -2468,13 +2468,13 @@ MAIN.boolEUS := FALSE;"</v>
                       <v n="Id">3729828405L</v>
                       <l n="Value" t="ArrayList" cet="NamedStyleFont">
                         <o>
-                          <v n="FontStyle">0</v>
+                          <v n="FontStyle">1</v>
                           <v n="AdditionalFontStyle" t="UInt16">0</v>
                           <v n="ExplicitColor">-16777216</v>
-                          <v n="CanonicalName">"Font-Standard"</v>
+                          <v n="CanonicalName">"Font-HeadingLarge"</v>
                           <v n="FontName">"Arial"</v>
                           <v n="DisplayName">""</v>
-                          <v n="FontSize">12</v>
+                          <v n="FontSize">28</v>
                           <v n="ScriptIdentification">0</v>
                           <v n="DoubleFontSize" t="Double">0</v>
                           <o n="NamedColor" t="NamedStyleColor">
@@ -2494,7 +2494,7 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">""</v>
+                      <v n="Value">"%s"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
@@ -2507,6 +2507,10 @@ MAIN.boolEUS := FALSE;"</v>
                     <o>
                       <v n="Id">4168582468L</v>
                       <v n="Value">"MAIN.testtt"</v>
+                    </o>
+                    <o>
+                      <v n="Id">823443203L</v>
+                      <v n="Value">"382"</v>
                     </o>
                   </l>
                 </o>
@@ -2633,11 +2637,11 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">1649127785L</v>
-                      <v n="Value">145</v>
+                      <v n="Value">153</v>
                     </o>
                     <o>
                       <v n="Id">357335551L</v>
-                      <v n="Value">349</v>
+                      <v n="Value">317</v>
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
@@ -2645,19 +2649,19 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
-                      <v n="Value">30</v>
+                      <v n="Value">106</v>
                     </o>
                     <o>
                       <v n="Id">3729828405L</v>
                       <l n="Value" t="ArrayList" cet="NamedStyleFont">
                         <o>
-                          <v n="FontStyle">0</v>
+                          <v n="FontStyle">1</v>
                           <v n="AdditionalFontStyle" t="UInt16">0</v>
                           <v n="ExplicitColor">-16777216</v>
-                          <v n="CanonicalName">"Font-Standard"</v>
+                          <v n="CanonicalName">"Font-HeadingLarge"</v>
                           <v n="FontName">"Arial"</v>
                           <v n="DisplayName">""</v>
-                          <v n="FontSize">12</v>
+                          <v n="FontSize">28</v>
                           <v n="ScriptIdentification">0</v>
                           <v n="DoubleFontSize" t="Double">0</v>
                           <o n="NamedColor" t="NamedStyleColor">
@@ -2669,11 +2673,11 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">550940142L</v>
-                      <v n="Value">220</v>
+                      <v n="Value">228</v>
                     </o>
                     <o>
                       <v n="Id">1473355128L</v>
-                      <v n="Value">364</v>
+                      <v n="Value">370</v>
                     </o>
                     <o>
                       <v n="Id">2678395525L</v>
@@ -2685,11 +2689,19 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">""</v>
+                      <v n="Value">"%s"</v>
                     </o>
                     <o>
                       <v n="Id">2597686782L</v>
-                      <v n="Value">true</v>
+                      <v n="Value">false</v>
+                    </o>
+                    <o>
+                      <v n="Id">823443203L</v>
+                      <v n="Value">"382"</v>
+                    </o>
+                    <o>
+                      <v n="Id">2477733581L</v>
+                      <v n="Value">"MAIN.mensajeIdioma"</v>
                     </o>
                   </l>
                 </o>

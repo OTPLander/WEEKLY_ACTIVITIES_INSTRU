@@ -6,6 +6,15 @@
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"382"</v>
+              <v n="TextDefault">"%s"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
               <v n="TextID">"152"</v>
               <v n="TextDefault">"CATALÀ"</v>
               <l n="LanguageTexts" t="ArrayList" cet="String">
@@ -17,6 +26,15 @@
             <o>
               <v n="TextID">"282"</v>
               <v n="TextDefault">"CATALÁ"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"69"</v>
+              <v n="TextDefault">"DESCONECTADO"</v>
               <l n="LanguageTexts" t="ArrayList" cet="String">
                 <v></v>
                 <v></v>
@@ -51,11 +69,29 @@
               </l>
             </o>
             <o>
+              <v n="TextID">"208"</v>
+              <v n="TextDefault">"OFF"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
               <v n="TextID">"793"</v>
               <v n="TextDefault">"ON SWITCH"</v>
               <l n="LanguageTexts" t="ArrayList" cet="String">
                 <v></v>
                 <v>llibertat presos polítics</v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"512"</v>
+              <v n="TextDefault">"ON/OFF"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
                 <v></v>
               </l>
             </o>

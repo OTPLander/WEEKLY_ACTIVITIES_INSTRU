@@ -25,7 +25,8 @@ VAR
 	
 	test : BOOL;
 	testt : TIME;
-	testtt : string;
+	testtt : STRING;
+	mensajeIdioma : STRING;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -42,7 +43,7 @@ IF test THEN
 	
 END_IF
 
-testtt := UINT_TO_STRING(TO_UINT(TIME() - testt));
+testtt := DWORD_TO_STRING(TIME_TO_DWORD(TIME() - testt) / 1000);
 
 
 
@@ -126,7 +127,27 @@ CASE mytrafficlight.state.state OF
 		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-END_CASE]]></ST>
+END_CASE
+
+// Primero comprobamos si el sistema está desconectado
+IF mytrafficlight.state.state = trafficLight_state_enum.A1_DISCONNECTED THEN
+    
+    // Si está en OFF, mostramos un mensaje de apagado o lo dejamos vacío
+    mensajeIdioma := 'SYSTEM OFF'; // O pon '' si prefieres que no salga nada
+
+ELSE
+    // Si NO está desconectado (está en ON), entonces ya miramos qué idioma poner
+    IF NOT boolCAT THEN
+        mensajeIdioma := 'Llibertat presos polítics';
+    ELSIF NOT boolENG THEN
+        mensajeIdioma := 'Nigga';
+    ELSIF NOT boolEUS THEN
+        mensajeIdioma := 'Gora euskalherria';
+    ELSE
+        mensajeIdioma := ''; 
+    END_IF
+    
+END_IF]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

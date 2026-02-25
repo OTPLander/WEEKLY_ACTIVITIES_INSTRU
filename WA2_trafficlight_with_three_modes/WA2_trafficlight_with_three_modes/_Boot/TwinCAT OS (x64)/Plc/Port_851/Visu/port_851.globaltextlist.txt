@@ -1,8 +1,12 @@
 Id;Default;EUSKERA;CATALÀ;ENGLISH
+382;%s;;;
 152;CATALÀ;;;
 282;CATALÁ;;;
+69;DESCONECTADO;;;
 404;DISCONNECT;;;
 287;ENGLSH;;;
 518;EUSKERA;;;
+208;OFF;;;
 793;ON SWITCH;;llibertat presos polítics;
+512;ON/OFF;;;
 364;TRAFFIC LIGHT HMI;trafikoa;Semàfor;
