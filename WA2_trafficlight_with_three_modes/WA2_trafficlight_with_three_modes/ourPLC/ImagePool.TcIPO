@@ -4,7 +4,7 @@
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="ImagePoolObject">
-          <v n="UniqueIdGenerator">"12"</v>
+          <v n="UniqueIdGenerator">"14"</v>
           <l n="BitmapPool" t="ArrayList" cet="ImagePoolItem">
             <o>
               <v n="BitmapID">"7882-errenteria_400px"</v>
@@ -27,9 +27,14 @@
               <v n="ItemID">9</v>
             </o>
             <o>
+              <v n="BitmapID">"1772114357870"</v>
+              <v n="FileID">"5ce3da45-db07-42e7-a21c-a00fff4ed8f6|images\1772114357870.png"</v>
+              <v n="ItemID">11</v>
+            </o>
+            <o>
               <v n="BitmapID">""</v>
               <v n="FileID">""</v>
-              <v n="ItemID">11</v>
+              <v n="ItemID">13</v>
             </o>
           </l>
           <v n="GuidInit">{61c523bc-bcf8-473c-8307-a8f12302d101}</v>

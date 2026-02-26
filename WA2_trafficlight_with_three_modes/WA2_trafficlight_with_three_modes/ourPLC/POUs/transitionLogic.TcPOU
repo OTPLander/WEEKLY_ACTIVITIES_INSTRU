@@ -7,7 +7,7 @@ VAR_IN_OUT
     mytrafficlight : trafficLight_typ;
 END_VAR
 VAR
-	initPhase: TIME;          // To save the start counting time
+
 
 	FTRIG_iRed : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
 	RTRIG_iGreen : R_TRIG;   // Detect the rising edge of the green button
@@ -49,10 +49,6 @@ RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
 
 FTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
 RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
-
-
-time_display := initPhase - TIME();
-
 
 IF RTRIG_iGreen.Q OR RTRIG_iGreenINPUT.Q THEN
 	
@@ -140,7 +136,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stRED; 
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_YELLOW(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -157,7 +153,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stGREEN;
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_RED(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -172,7 +168,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW; 
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_GREEN(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -184,8 +180,8 @@ CASE mytrafficlight.state.state OF
 		
 		
 		IF FTRIG_iRed.Q  THEN 
-			mytrafficlight.timers.maxtime_YELLOW := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_YELLOW := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stRED;
 			
         END_IF;
@@ -198,8 +194,8 @@ CASE mytrafficlight.state.state OF
         END_IF;		
 		
 		IF FTRIG_iRed.Q THEN 
-			mytrafficlight.timers.maxtime_RED := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_RED := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stGREEN;
         END_IF;
 
@@ -211,8 +207,8 @@ CASE mytrafficlight.state.state OF
 		
 
 		IF FTRIG_iRed.Q THEN 
-			mytrafficlight.timers.maxtime_GREEN := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_GREEN := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW;
         END_IF; 
 END_CASE]]></ST>

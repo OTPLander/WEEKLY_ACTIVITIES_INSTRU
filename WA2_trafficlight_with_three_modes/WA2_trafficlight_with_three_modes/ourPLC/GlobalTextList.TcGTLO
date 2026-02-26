@@ -104,7 +104,63 @@
                 <v></v>
               </l>
             </o>
+            
+            <o>
+              <v n="TextID">"INST_OFF"</v>
+              <v n="TextDefault">"Sistema apagado.&#10;Active el interruptor para iniciar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Sistema itzalita.&#10;Piztu etengailua hasteko.</v>
+                <v>Sistema apagat.&#10;Activi l'interruptor per iniciar.</v>
+                <v>System off.&#10;Turn on the switch to start.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_WAIT"</v>
+              <v n="TextDefault">"Modo Espera (Parpadeo).&#10;Pulse BOTÓN VERDE para inicio."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Itxarote modua (Keinuka).&#10;Sakatu BOTOI BERDEA hasteko.</v>
+                <v>Mode espera (Parpelleig).&#10;Premi BOTÓ VERD per iniciar.</v>
+                <v>Standby mode (Blinking).&#10;Press GREEN BUTTON to start.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_NORMAL"</v>
+              <v n="TextDefault">"Funcionamiento Normal.&#10;Pulse BOTÓN ROJO para Setup."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Funtzionamendu normala.&#10;Sakatu BOTOI GORRIA konfiguratzeko.</v>
+                <v>Funcionament normal.&#10;Premi BOTÓ VERMELL per al Setup.</v>
+                <v>Normal operation.&#10;Press RED BUTTON for Setup.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_Y"</v>
+              <v n="TextDefault">"Setup: Tiempo AMARILLO.&#10;Pulse BOTÓN ROJO para guardar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Horiaren denbora.&#10;Sakatu BOTOI GORRIA gordetzeko.</v>
+                <v>Setup: Temps GROC.&#10;Premi BOTÓ VERMELL per guardar.</v>
+                <v>Setup: YELLOW time.&#10;Press RED BUTTON to save.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_R"</v>
+              <v n="TextDefault">"Setup: Tiempo ROJO.&#10;Pulse BOTÓN ROJO para guardar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Gorriaren denbora.&#10;Sakatu BOTOI GORRIA gordetzeko.</v>
+                <v>Setup: Temps VERMELL.&#10;Premi BOTÓ VERMELL per guardar.</v>
+                <v>Setup: RED time.&#10;Press RED BUTTON to save.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_G"</v>
+              <v n="TextDefault">"Setup: Tiempo VERDE.&#10;Pulse BOTÓN ROJO para terminar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Berdearen denbora.&#10;Sakatu BOTOI GORRIA amaitzeko.</v>
+                <v>Setup: Temps VERD.&#10;Premi BOTÓ VERMELL per acabar.</v>
+                <v>Setup: GREEN time.&#10;Press RED BUTTON to finish.</v>
+              </l>
+            </o>
           </l>
+          
           <l n="Languages" t="ArrayList" cet="String">
             <v>EUSKERA</v>
             <v>CATALÀ</v>

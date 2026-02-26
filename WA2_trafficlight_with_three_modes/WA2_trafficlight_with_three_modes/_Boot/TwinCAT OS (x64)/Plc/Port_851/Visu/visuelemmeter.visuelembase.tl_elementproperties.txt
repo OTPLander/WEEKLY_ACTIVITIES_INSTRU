@@ -203,4 +203,5 @@ Center;Center
 Desc_StaticCenter;The center of this element. Used for scaling or rotating, for example.
 Desc_MoveAbsolute;Movement of the whole element.
 Desc_MoveRelative;Movement of single edges of the element. That means modifications of the element form.
+Desc_FrameStaticAngle;The angle by which the element is rotated relative to the specified center point. Note: Offline view can differ from the online view.
 ;

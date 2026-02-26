@@ -23,10 +23,10 @@ VAR
 	boolENG : BOOL;
 	boolCAT : BOOL;
 	
-	test : BOOL;
-	testt : TIME;
-	testtt : STRING;
+	visuTIME : STRING;
+
 	mensajeIdioma : STRING;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -37,13 +37,8 @@ END_VAR
 //	VisuElems.CURRENTVISU := 'Visualization';		
 //END_IF
 
-IF test THEN
-	test := FALSE;
-	testt := TIME();
-	
-END_IF
 
-testtt := DWORD_TO_STRING(TIME_TO_DWORD(TIME() - testt) / 1000);
+
 
 
 
@@ -130,24 +125,126 @@ CASE mytrafficlight.state.state OF
 END_CASE
 
 // Primero comprobamos si el sistema está desconectado
-IF mytrafficlight.state.state = trafficLight_state_enum.A1_DISCONNECTED THEN
+//IF mytrafficlight.state.state = trafficLight_state_enum.A1_DISCONNECTED THEN
     
     // Si está en OFF, mostramos un mensaje de apagado o lo dejamos vacío
-    mensajeIdioma := 'SYSTEM OFF'; // O pon '' si prefieres que no salga nada
+  //  mensajeIdioma := 'SYSTEM OFF'; // O pon '' si prefieres que no salga nada
 
-ELSE
+//ELSE
     // Si NO está desconectado (está en ON), entonces ya miramos qué idioma poner
-    IF NOT boolCAT THEN
-        mensajeIdioma := 'Llibertat presos polítics';
-    ELSIF NOT boolENG THEN
-        mensajeIdioma := 'Nigga';
-    ELSIF NOT boolEUS THEN
-        mensajeIdioma := 'Gora euskalherria';
-    ELSE
-        mensajeIdioma := ''; 
-    END_IF
+    //IF NOT boolCAT THEN
+      //  mensajeIdioma := 'Llibertat presos polítics';
+    //ELSIF NOT boolENG THEN
+      //ELSIF NOT boolEUS THEN
+     // ELSE
+ //       mensajeIdioma := ''; 
+//    END_IF
     
-END_IF]]></ST>
+//END_IF
+
+mensajeIdioma := strInstrucciones();
+visuTIME := newVisuTimeString(mytrafficlight);]]></ST>
     </Implementation>
+    <Method Name="newVisuTimeString" Id="{db1114be-106b-4010-a1c2-fc20671d6aa4}">
+      <Declaration><![CDATA[METHOD newVisuTimeString : STRING
+VAR_IN_OUT
+	
+	mytrafficlight : trafficlight_typ;
+
+	
+END_VAR
+
+VAR_STAT
+	newTime : TIME;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Cálculo del tiempo a mostrar dependiendo del estado actual
+CASE mytrafficlight.state.state OF
+    
+    // SISTEMA DESCONECTADO
+    trafficLight_state_enum.A1_DISCONNECTED:
+        newTime := T#0S; // Opcional: podrías ponerlo a 0 o mantener el último valor
+
+    // MODO PARPADEO (Tiempo restante)
+    trafficLight_state_enum.F2_stBLINKon, 
+    trafficLight_state_enum.F2_stBLINKoff:
+        newTime := mytrafficlight.timers.TON_BLINK.PT - mytrafficlight.timers.TON_BLINK.ET;
+        
+    // MODOS NORMALES (Tiempo restante para cambiar)
+    trafficLight_state_enum.F1_stYELLOW:
+        newTime := mytrafficlight.timers.TON_YELLOW.PT - mytrafficlight.timers.TON_YELLOW.ET;
+        
+    trafficLight_state_enum.F1_stRED:
+        newTime := mytrafficlight.timers.TON_RED.PT - mytrafficlight.timers.TON_RED.ET;
+        
+    trafficLight_state_enum.F1_stGREEN:
+        newTime := mytrafficlight.timers.TON_GREEN.PT - mytrafficlight.timers.TON_GREEN.ET;
+
+    // MODOS DE SETUP (Tiempo transcurrido en el estado)
+    trafficLight_state_enum.F6_stYELLOW,
+    trafficLight_state_enum.F6_stRED,
+    trafficLight_state_enum.F6_stGREEN:
+        // Tiempo actual menos el tiempo guardado al iniciar la fase
+        newTime := TIME() - mytrafficlight.timers.init_phase; 
+        
+END_CASE
+
+// Finalmente, convertimos el tiempo calculado a String para la visualización
+newVisuTimeString := time2string(newTime);]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="strInstrucciones" Id="{a2df0092-7db1-4b1f-b627-c734d5c5698b}">
+      <Declaration><![CDATA[METHOD strInstrucciones : STRING
+VAR_INPUT
+
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE mytrafficlight.state.state OF
+
+    // SISTEMA DESCONECTADO
+    trafficLight_state_enum.A1_DISCONNECTED:
+        strInstrucciones := 'INST_OFF';
+
+    // MODO PARPADEO (F2)
+    trafficLight_state_enum.F2_stBLINKon,
+    trafficLight_state_enum.F2_stBLINKoff:
+        strInstrucciones := 'INST_WAIT';
+
+    // MODO NORMAL (F1)
+    trafficLight_state_enum.F1_stYELLOW,
+    trafficLight_state_enum.F1_stRED,
+    trafficLight_state_enum.F1_stGREEN:
+        strInstrucciones := 'INST_NORMAL';
+
+    // MODO SETUP - CONFIGURANDO AMARILLO
+    trafficLight_state_enum.F6_stYELLOW:
+        strInstrucciones := 'INST_SETUP_Y';
+
+    // MODO SETUP - CONFIGURANDO ROJO
+    trafficLight_state_enum.F6_stRED:
+        strInstrucciones := 'INST_SETUP_R';
+
+    // MODO SETUP - CONFIGURANDO VERDE
+    trafficLight_state_enum.F6_stGREEN:
+        strInstrucciones := 'INST_SETUP_G';
+
+    ELSE
+        strInstrucciones := ''; // O un ID por defecto como 'UNKNOWN'
+
+END_CASE]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="time2string" Id="{e484266a-2da8-4ee3-9c2f-ec11b5a2d589}">
+      <Declaration><![CDATA[METHOD time2string : STRING
+VAR_INPUT
+	timex : TIME;
+	
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[time2string := DWORD_TO_STRING(TIME_TO_DWORD( timex) / 1000);]]></ST>
+      </Implementation>
+    </Method>
   </POU>
 </TcPlcObject>
