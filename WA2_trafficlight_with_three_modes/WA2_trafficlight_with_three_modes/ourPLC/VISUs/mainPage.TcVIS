@@ -5,7 +5,7 @@
       <Data>
         <o xml:space="preserve" t="VisualObject">
           <n n="LastVisuLanguageModelEntry" />
-          <v n="UniqueIdGenerator">"179"</v>
+          <v n="UniqueIdGenerator">"182"</v>
           <o n="VisualElemList" t="VisualElemList">
             <l n="VisualElementList" t="VisualElemCollection" cet="GenericVisualElem">
               <o>
@@ -2851,15 +2851,14 @@ MAIN.boolEUS := FALSE;"</v>
                     </o>
                     <o>
                       <v n="Id">3729828405L</v>
-                      <l n="Value" t="ArrayList" cet="NamedStyleFont">
+                      <l n="Value" t="ArrayList" cet="FontDescription">
                         <o>
-                          <v n="FontStyle">1</v>
-                          <v n="AdditionalFontStyle" t="UInt16">0</v>
+                          <v n="FontStyle">0</v>
+                          <v n="AdditionalFontStyle" t="UInt16">16</v>
                           <v n="ExplicitColor">-16777216</v>
-                          <v n="CanonicalName">"Font-HeadingLarge"</v>
-                          <v n="FontName">"Arial"</v>
-                          <v n="DisplayName">""</v>
-                          <v n="FontSize">28</v>
+                          <v n="FontName">"Footlight MT Light"</v>
+                          <v n="DisplayName">"Footlight MT Light"</v>
+                          <v n="FontSize">48</v>
                           <v n="ScriptIdentification">0</v>
                           <v n="DoubleFontSize" t="Double">0</v>
                           <o n="NamedColor" t="NamedStyleColor">
@@ -3278,7 +3277,7 @@ MAIN.boolEUS := FALSE;"</v>
             </o>
             <v n="DialogDut">{0f418d17-cdbc-42f8-9823-6ac8d6acf186}</v>
           </o>
-          <v n="LastUsedIdForIdentifier">48</v>
+          <v n="LastUsedIdForIdentifier">49</v>
           <o n="TextDocument" t="TextDocument">
             <v n="TextBlobForSerialisation">"VAR_IN_OUT
 	
@@ -3330,6 +3329,7 @@ END_VAR"</v>
         <Type n="ChangeLanguageInputAction">{0b465b1a-56f7-4156-af53-ee076758cd13}</Type>
         <Type n="ComplexInput">{1de566f6-72a7-494c-9353-9a418172c96e}</Type>
         <Type n="Double">System.Double</Type>
+        <Type n="FontDescription">{896a5e54-96c3-433b-96d2-4f1442fef591}</Type>
         <Type n="GeneratedLanguageModelEntriesData">{703465dc-4679-4ff2-bcc3-c57d0a204da3}</Type>
         <Type n="GenericFbDescription">{40d6dd8d-dfd0-493a-8e29-c9a35e1e6539}</Type>
         <Type n="GenericVisualElem">{f86c2928-8614-4cca-824b-e819ac4d58c4}</Type>

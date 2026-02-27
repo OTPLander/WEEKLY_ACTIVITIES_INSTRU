@@ -37,7 +37,9 @@ VAR
 	time_display : TIME;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[FTRIG_iRedHMI(CLK := mytrafficlight.inputs.iHMIred);
+      <ST><![CDATA[
+// RISING AND FALLING TRIGGER FUNCTION BLOCK DEFINITON
+FTRIG_iRedHMI(CLK := mytrafficlight.inputs.iHMIred);
 RTRIG_iGreenHMI(CLK := mytrafficlight.inputs.iHMIGreen);
 
 FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
@@ -49,6 +51,8 @@ RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
 
 FTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
 RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
+
+// INPUT COMBINATION LOGIC
 
 IF RTRIG_iGreen.Q OR RTRIG_iGreenINPUT.Q THEN
 	
