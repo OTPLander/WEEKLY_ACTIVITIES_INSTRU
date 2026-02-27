@@ -67,7 +67,7 @@
               <v>4da13e5b-0ef7-42b5-95c6-6d1042c0ddac</v>
             </d>
             <d n="FbProperties" t="CaseInsensitiveHashtable" />
-            <v n="FbName">"NotImportant"</v>
+            <v n="FbName">"__VisuInitInstantiation_Fb"</v>
             <v n="FbGuid">{79b8c247-7f71-4bac-98e9-64b1edb0d546}</v>
           </o>
           <o n="TargetProperties" t="VisualizationTargetProperties">
@@ -594,7 +594,7 @@
         <Data>
           <o xml:space="preserve" t="TargetVisualizationObject">
             <o n="ViewSettings" t="TargetVisualizationViewSettings">
-              <v n="StartVisu">"MiPrimeraPantalla"</v>
+              <v n="StartVisu">"disconnected"</v>
               <n n="HtmFileName" />
               <v n="UpdateRate">200</v>
               <v n="CommBufferSize">50000</v>
@@ -632,7 +632,7 @@
         <Data>
           <o xml:space="preserve" t="WebVisualizationObject">
             <o n="ViewSettings" t="WebVisualizationViewSettings">
-              <v n="StartVisu">"MiPrimeraPantalla"</v>
+              <v n="StartVisu">"mainPage"</v>
               <v n="HtmFileName">"webvisu"</v>
               <v n="MainStartHtm">true</v>
               <v n="UpdateRate">200</v>

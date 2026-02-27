@@ -41,7 +41,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}" Name="ourPLC" PrjFilePath="ourPLC\ourPLC.plcproj" TmcFilePath="ourPLC\ourPLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{E3165F13-7F1D-0F9E-D439-EE00AA575E1B}" TmcPath="ourPLC\ourPLC.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{9444AFC6-ACA6-E5D1-8FE7-99BBB9192C75}" TmcPath="ourPLC\ourPLC.tmc">
 					<Name>ourPLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -61,6 +61,10 @@
 					</Vars>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.capacitive</Name>
+							<Type>BOOL</Type>
+						</Var>
 						<Var>
 							<Name>MAIN.mytrafficlight.inputs.iRedINPUT</Name>
 							<Type>BOOL</Type>
@@ -574,6 +578,7 @@
 				<Link VarA="PlcTask Outputs^MAIN.mytrafficlight.outputs.YELLOWlight" VarB="Channel 3^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 5 (EL1008)">
+				<Link VarA="PlcTask Inputs^MAIN.capacitive" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iGreenINPUT" VarB="Channel 5^Input"/>
 				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iRedINPUT" VarB="Channel 7^Input"/>
 				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iSwitchOffINPUT" VarB="Channel 1^Input"/>

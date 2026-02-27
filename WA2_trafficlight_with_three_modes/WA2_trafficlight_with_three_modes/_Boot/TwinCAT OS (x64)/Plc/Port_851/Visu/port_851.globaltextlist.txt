@@ -1,15 +1,19 @@
 Id;Default;EUSKERA;CATALÀ;ENGLISH
 382;%s;;;
+130;CAT;;;
 152;CATALÀ;;;
 282;CATALÁ;;;
 69;DESCONECTADO;;;
 404;DISCONNECT;;;
+671;EL HMI DEL SEMÁFORO;;;
+872;ENG;;;
 287;ENGLSH;;;
+876;ESP;;;
+258;EUS;;;
 518;EUSKERA;;;
 208;OFF;;;
-793;ON SWITCH;;llibertat presos polítics;
 512;ON/OFF;;;
-364;TRAFFIC LIGHT HMI;trafikoa;Semàfor;
+364;TRAFFIC LIGHT HMI;SEMAFOROAREN HMIa;L$'HMI DEL SEMÀFOR;THE TRAFFIC LIGHT HMI
 INST_OFF;Sistema apagado.$R$NActive el interruptor para iniciar.;Sistema itzalita.$R$NPiztu etengailua hasteko.;Sistema apagat.$R$NActivi l$'interruptor per iniciar.;System off.$R$NTurn on the switch to start.
 INST_WAIT;Modo Espera (Parpadeo).$R$NPulse BOTÓN VERDE para inicio.;Itxarote modua (Keinuka).$R$NSakatu BOTOI BERDEA hasteko.;Mode espera (Parpelleig).$R$NPremi BOTÓ VERD per iniciar.;Standby mode (Blinking).$R$NPress GREEN BUTTON to start.
 INST_NORMAL;Funcionamiento Normal.$R$NPulse BOTÓN ROJO para Setup.;Funtzionamendu normala.$R$NSakatu BOTOI GORRIA konfiguratzeko.;Funcionament normal.$R$NPremi BOTÓ VERMELL per al Setup.;Normal operation.$R$NPress RED BUTTON for Setup.

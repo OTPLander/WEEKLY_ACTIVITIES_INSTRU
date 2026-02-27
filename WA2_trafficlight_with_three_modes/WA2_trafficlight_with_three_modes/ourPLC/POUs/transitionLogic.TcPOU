@@ -73,22 +73,23 @@ END_IF
 
 
 
-(* Detectar cambio en HMI *)
+
 bChangeHMI := HMI_Switch XOR HMI_Switch_Old;
 HMI_Switch_Old := HMI_Switch;
 
-(* Detectar cambio en PLC *)
 bChangePLC := mytrafficlight.inputs.iSwitchOnINPUT XOR PLC_Switch_Old;
 PLC_Switch_Old := mytrafficlight.inputs.iSwitchOnINPUT;
 
-(* Si cualquiera cambia, hacer toggle *)
+
 IF bChangeHMI OR bChangePLC THEN
 	mySwitchState := NOT mySwitchState;
 END_IF;
 
-(* Actualizar salidas reales *)
+
 mytrafficlight.inputs.iSwitchOn  := mySwitchState;
 mytrafficlight.inputs.iSwitchOff := NOT mySwitchState;
+
+updatecurretVisu(mtl := mytrafficlight);
 
 CASE mytrafficlight.state.state OF
     trafficLight_state_enum.A1_DISCONNECTED:
@@ -213,5 +214,21 @@ CASE mytrafficlight.state.state OF
         END_IF; 
 END_CASE]]></ST>
     </Implementation>
+    <Method Name="updatecurretVisu" Id="{93404da7-7d55-47ab-a7f0-b90de842ed0b}">
+      <Declaration><![CDATA[METHOD updatecurretVisu
+VAR_INPUT
+	mtl : trafficlight_typ;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE mtl.state.state OF
+	0:
+	VisuElems.CURRENTVISU := 'disconnected';
+	VisuElems.CURRENTLANGUAGE := 'Default';
+	ELSE
+	VisuElems.CURRENTVISU := 'mainPage';		
+END_CASE]]></ST>
+      </Implementation>
+    </Method>
   </POU>
 </TcPlcObject>
