@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <GlobalTextList Name="GlobalTextList" Id="{ef6b3fe7-0530-4f5a-9b7a-88486f294e19}">
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="GlobalTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"382"</v>
+              <v n="TextDefault">"%s"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"130"</v>
+              <v n="TextDefault">"CAT"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"152"</v>
+              <v n="TextDefault">"CATALÀ"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"282"</v>
+              <v n="TextDefault">"CATALÁ"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"69"</v>
+              <v n="TextDefault">"DESCONECTADO"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"404"</v>
+              <v n="TextDefault">"DISCONNECT"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"671"</v>
+              <v n="TextDefault">"EL HMI DEL SEMÁFORO"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"872"</v>
+              <v n="TextDefault">"ENG"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"287"</v>
+              <v n="TextDefault">"ENGLSH"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"876"</v>
+              <v n="TextDefault">"ESP"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"258"</v>
+              <v n="TextDefault">"EUS"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"518"</v>
+              <v n="TextDefault">"EUSKERA"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"208"</v>
+              <v n="TextDefault">"OFF"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"512"</v>
+              <v n="TextDefault">"ON/OFF"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v></v>
+                <v></v>
+                <v></v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"364"</v>
+              <v n="TextDefault">"TRAFFIC LIGHT HMI"</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>SEMAFOROAREN HMIa</v>
+                <v>L'HMI DEL SEMÀFOR</v>
+                <v>THE TRAFFIC LIGHT HMI</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_OFF"</v>
+              <v n="TextDefault">"Sistema apagado.
+Active el interruptor para iniciar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Sistema itzalita.
+Piztu etengailua hasteko.</v>
+                <v>Sistema apagat.
+Activi l'interruptor per iniciar.</v>
+                <v>System off.
+Turn on the switch to start.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_WAIT"</v>
+              <v n="TextDefault">"Modo Espera (Parpadeo).
+Pulse BOTÓN VERDE para inicio."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Itxarote modua (Keinuka).
+Sakatu BOTOI BERDEA hasteko.</v>
+                <v>Mode espera (Parpelleig).
+Premi BOTÓ VERD per iniciar.</v>
+                <v>Standby mode (Blinking).
+Press GREEN BUTTON to start.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_NORMAL"</v>
+              <v n="TextDefault">"Funcionamiento Normal.
+Pulse BOTÓN ROJO para Setup."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Funtzionamendu normala.
+Sakatu BOTOI GORRIA konfiguratzeko.</v>
+                <v>Funcionament normal.
+Premi BOTÓ VERMELL per al Setup.</v>
+                <v>Normal operation.
+Press RED BUTTON for Setup.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_Y"</v>
+              <v n="TextDefault">"Setup: Tiempo AMARILLO.
+Pulse BOTÓN ROJO para guardar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Horiaren denbora.
+Sakatu BOTOI GORRIA gordetzeko.</v>
+                <v>Setup: Temps GROC.
+Premi BOTÓ VERMELL per guardar.</v>
+                <v>Setup: YELLOW time.
+Press RED BUTTON to save.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_R"</v>
+              <v n="TextDefault">"Setup: Tiempo ROJO.
+Pulse BOTÓN ROJO para guardar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Gorriaren denbora.
+Sakatu BOTOI GORRIA gordetzeko.</v>
+                <v>Setup: Temps VERMELL.
+Premi BOTÓ VERMELL per guardar.</v>
+                <v>Setup: RED time.
+Press RED BUTTON to save.</v>
+              </l>
+            </o>
+            <o>
+              <v n="TextID">"INST_SETUP_G"</v>
+              <v n="TextDefault">"Setup: Tiempo VERDE.
+Pulse BOTÓN ROJO para terminar."</v>
+              <l n="LanguageTexts" t="ArrayList" cet="String">
+                <v>Setup: Berdearen denbora.
+Sakatu BOTOI GORRIA amaitzeko.</v>
+                <v>Setup: Temps VERD.
+Premi BOTÓ VERMELL per acabar.</v>
+                <v>Setup: GREEN time.
+Press RED BUTTON to finish.</v>
+              </l>
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" cet="String">
+            <v>EUSKERA</v>
+            <v>CATALÀ</v>
+            <v>ENGLISH</v>
+          </l>
+          <v n="GuidInit">{9b01cfe7-825f-4ed1-b87e-63ca963324f0}</v>
+          <v n="GuidReInit">{ed4d9355-6c7c-4f44-b1c8-e09e2fa685d0}</v>
+          <v n="GuidExitX">{01225d70-f07d-430a-a050-8d53e77c6520}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="GlobalTextListObject">{63784cbb-9ba0-45e6-9d69-babf3f040511}</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </GlobalTextList>
+</TcPlcObject>

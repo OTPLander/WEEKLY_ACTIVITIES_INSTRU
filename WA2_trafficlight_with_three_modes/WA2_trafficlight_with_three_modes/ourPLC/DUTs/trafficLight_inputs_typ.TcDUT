@@ -3,10 +3,22 @@
   <DUT Name="trafficLight_inputs_typ" Id="{db6c190d-1fb6-42c4-bd0a-1c2f44e93be8}">
     <Declaration><![CDATA[TYPE trafficLight_inputs_typ :
 STRUCT
-	iRed AT %I*: BOOL;
-	iGreen AT %I*: BOOL;
-	iSwitchOn AT %I*: BOOL;
-	iSwitchOff AT %I*: BOOL;
+	
+// Previously PLC linked  -> no they just act as transition conditions
+	iRed : BOOL;
+	iGreen : BOOL;
+	iSwitchOn : BOOL;
+	iSwitchOff : BOOL;
+	
+// HMI Linked
+	iHMIred: BOOL;
+	iHMIgreen: BOOL;
+
+// PLC Linked
+	iRedINPUT AT %I*: BOOL;
+	iGreenINPUT AT %I*: BOOL;
+	iSwitchOnINPUT AT %I*: BOOL;
+	iSwitchOffINPUT AT %I*: BOOL;
 END_STRUCT
 END_TYPE
 ]]></Declaration>

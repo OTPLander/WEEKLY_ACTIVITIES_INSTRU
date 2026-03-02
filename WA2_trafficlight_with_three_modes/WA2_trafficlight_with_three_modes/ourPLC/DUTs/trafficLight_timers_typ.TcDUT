@@ -20,6 +20,9 @@ STRUCT
 	maxtime_EMERGENCY: TIME := T#1S;
 	
 	elapsedTime: TIME;
+	
+	init_phase: TIME;
+	
 END_STRUCT
 END_TYPE
 ]]></Declaration>

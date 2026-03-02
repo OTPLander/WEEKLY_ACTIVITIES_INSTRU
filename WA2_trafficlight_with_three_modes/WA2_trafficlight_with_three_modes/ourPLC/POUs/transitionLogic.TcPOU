@@ -7,15 +7,93 @@ VAR_IN_OUT
     mytrafficlight : trafficLight_typ;
 END_VAR
 VAR
-	initPhase: TIME;          // To save the start counting time
+
 
 	FTRIG_iRed : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
 	RTRIG_iGreen : R_TRIG;   // Detect the rising edge of the green button
 
+
+	FTRIG_iRedINPUT : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_iGreenINPUT : R_TRIG;   // Detect the rising edge of the green button
+	
+	FTRIG_SWITCH : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_SWITCH : R_TRIG;   // Detect the rising edge of the green button
+	
+
+	
+	FTRIG_iRedHMI : F_TRIG;     // Detect the falling edge of the red button (red button -> high when unpressed and low when pressed)
+	RTRIG_iGreenHMI : R_TRIG;   // Detect the rising edge of the green button
+	
+	
+
+	mySwitchState: BOOL;
+	bChangeHMI: BOOL;
+	HMI_Switch: BOOL;
+	HMI_Switch_Old: BOOL;
+	bChangePLC: BOOL;
+	PLC_Switch: BOOL;
+	PLC_Switch_Old: BOOL;
+	
+	time_display : TIME;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
+      <ST><![CDATA[
+// RISING AND FALLING TRIGGER FUNCTION BLOCK DEFINITON
+FTRIG_iRedHMI(CLK := mytrafficlight.inputs.iHMIred);
+RTRIG_iGreenHMI(CLK := mytrafficlight.inputs.iHMIGreen);
+
+FTRIG_iRed(CLK := mytrafficlight.inputs.iRed);
 RTRIG_iGreen(CLK := mytrafficlight.inputs.iGreen);
+
+
+FTRIG_iRedINPUT(CLK := mytrafficlight.inputs.iRedINPUT);
+RTRIG_iGreenINPUT(CLK := mytrafficlight.inputs.iGreenINPUT);
+
+FTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
+RTRIG_SWITCH(CLK := mytrafficlight.inputs.iSwitchOnINPUT);
+
+// INPUT COMBINATION LOGIC
+
+IF RTRIG_iGreen.Q OR RTRIG_iGreenINPUT.Q THEN
+	
+			mytrafficlight.inputs.iGreen := TRUE;
+		
+ELSE
+			mytrafficlight.inputs.iGreen := FALSE;
+			
+END_IF
+	
+	
+
+IF FTRIG_iRed.Q OR FTRIG_iRedINPUT.Q THEN
+	
+			mytrafficlight.inputs.iRed := FALSE;
+		
+ELSE
+			mytrafficlight.inputs.iRed := TRUE;
+			
+END_IF
+	
+
+
+
+
+bChangeHMI := HMI_Switch XOR HMI_Switch_Old;
+HMI_Switch_Old := HMI_Switch;
+
+bChangePLC := mytrafficlight.inputs.iSwitchOnINPUT XOR PLC_Switch_Old;
+PLC_Switch_Old := mytrafficlight.inputs.iSwitchOnINPUT;
+
+
+IF bChangeHMI OR bChangePLC THEN
+	mySwitchState := NOT mySwitchState;
+END_IF;
+
+
+mytrafficlight.inputs.iSwitchOn  := mySwitchState;
+mytrafficlight.inputs.iSwitchOff := NOT mySwitchState;
+
+updatecurretVisu(mtl := mytrafficlight);
 
 CASE mytrafficlight.state.state OF
     trafficLight_state_enum.A1_DISCONNECTED:
@@ -63,7 +141,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stRED; 
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_YELLOW(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -80,7 +158,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stGREEN;
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_RED(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -95,7 +173,7 @@ CASE mytrafficlight.state.state OF
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW; 
 		ELSIF FTRIG_iRed.Q THEN 
 			mytrafficlight.timers.TON_GREEN(IN := FALSE);
-			initPhase := TIME();
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stYELLOW;
         END_IF;
 
@@ -107,8 +185,8 @@ CASE mytrafficlight.state.state OF
 		
 		
 		IF FTRIG_iRed.Q  THEN 
-			mytrafficlight.timers.maxtime_YELLOW := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_YELLOW := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stRED;
 			
         END_IF;
@@ -121,8 +199,8 @@ CASE mytrafficlight.state.state OF
         END_IF;		
 		
 		IF FTRIG_iRed.Q THEN 
-			mytrafficlight.timers.maxtime_RED := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_RED := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F6_stGREEN;
         END_IF;
 
@@ -134,11 +212,27 @@ CASE mytrafficlight.state.state OF
 		
 
 		IF FTRIG_iRed.Q THEN 
-			mytrafficlight.timers.maxtime_GREEN := TIME() - initPhase;
-			initPhase := TIME();
+			mytrafficlight.timers.maxtime_GREEN := TIME() - mytrafficlight.timers.init_phase;
+			mytrafficlight.timers.init_phase := TIME();
             mytrafficlight.state.state := trafficLight_state_enum.F1_stYELLOW;
         END_IF; 
 END_CASE]]></ST>
     </Implementation>
+    <Method Name="updatecurretVisu" Id="{93404da7-7d55-47ab-a7f0-b90de842ed0b}">
+      <Declaration><![CDATA[METHOD updatecurretVisu
+VAR_INPUT
+	mtl : trafficlight_typ;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE mtl.state.state OF
+	0:
+	VisuElems.CURRENTVISU := 'disconnected';
+	VisuElems.CURRENTLANGUAGE := 'Default';
+	ELSE
+	VisuElems.CURRENTVISU := 'mainPage';		
+END_CASE]]></ST>
+      </Implementation>
+    </Method>
   </POU>
 </TcPlcObject>

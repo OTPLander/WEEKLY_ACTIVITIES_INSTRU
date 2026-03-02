@@ -7,7 +7,7 @@ VAR_IN_OUT
    mytrafficlight : trafficLight_typ; 
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// ESTO ES EL CUERPO DEL FB_TrafficOutputs
+      <ST><![CDATA[
 CASE mytrafficlight.state.state OF
     
     trafficLight_state_enum.A1_DISCONNECTED:

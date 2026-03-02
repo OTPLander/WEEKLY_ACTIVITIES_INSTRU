@@ -18,10 +18,30 @@ VAR
 	mytrafficlight: trafficLight_typ;      // DATA STRUCT
 	updateOutput: outHandler;              // FUNCTION BLOCK: Updates our three outputs
 	updateState : transitionLogic;         // FUNCTION BLOCK: Uptades the state of the state machine
+	
+	boolEUS : BOOL;
+	boolENG : BOOL;
+	boolCAT : BOOL;
+	
+	visuTIME : STRING;
+
+	mensajeIdioma : STRING;
+	
+	capacitive AT %I* : BOOL;
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CASE mytrafficlight.state.state OF
+      <ST><![CDATA[
+IF capacitive THEN
+	;
+ELSE
+	;
+END_IF
+
+
+
+CASE mytrafficlight.state.state OF
 
     trafficLight_state_enum.A1_DISCONNECTED: 
         mytrafficlight.state.state_str := 'A1_DISCONNECTED'; 
@@ -101,7 +121,110 @@ END_VAR
 		updateOutput(mytrafficlight:=mytrafficlight);
 		updateState(mytrafficlight:=mytrafficlight);		
 
-END_CASE]]></ST>
+END_CASE
+
+mensajeIdioma := strInstructions();
+visuTIME := newVisuTimeString(mytrafficlight);]]></ST>
     </Implementation>
+    <Method Name="newVisuTimeString" Id="{db1114be-106b-4010-a1c2-fc20671d6aa4}">
+      <Declaration><![CDATA[METHOD newVisuTimeString : STRING
+VAR_IN_OUT
+	
+	mytrafficlight : trafficlight_typ;
+
+	
+END_VAR
+
+VAR_STAT
+	newTime : TIME;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+CASE mytrafficlight.state.state OF
+    
+
+    trafficLight_state_enum.A1_DISCONNECTED:
+        newTime := T#0S; 
+
+
+    trafficLight_state_enum.F2_stBLINKon, 
+    trafficLight_state_enum.F2_stBLINKoff:
+        newTime := mytrafficlight.timers.TON_BLINK.PT - mytrafficlight.timers.TON_BLINK.ET;
+        
+
+    trafficLight_state_enum.F1_stYELLOW:
+        newTime := mytrafficlight.timers.TON_YELLOW.PT - mytrafficlight.timers.TON_YELLOW.ET;
+        
+    trafficLight_state_enum.F1_stRED:
+        newTime := mytrafficlight.timers.TON_RED.PT - mytrafficlight.timers.TON_RED.ET;
+        
+    trafficLight_state_enum.F1_stGREEN:
+        newTime := mytrafficlight.timers.TON_GREEN.PT - mytrafficlight.timers.TON_GREEN.ET;
+
+ 
+    trafficLight_state_enum.F6_stYELLOW,
+    trafficLight_state_enum.F6_stRED,
+    trafficLight_state_enum.F6_stGREEN:
+
+        newTime := TIME() - mytrafficlight.timers.init_phase; 
+        
+END_CASE
+
+newVisuTimeString := time2string(newTime);]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="strInstructions" Id="{a2df0092-7db1-4b1f-b627-c734d5c5698b}">
+      <Declaration><![CDATA[METHOD strInstructions : STRING
+VAR_INPUT
+
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE mytrafficlight.state.state OF
+
+
+    trafficLight_state_enum.A1_DISCONNECTED:
+        strInstructions := 'INST_OFF';
+
+
+    trafficLight_state_enum.F2_stBLINKon,
+    trafficLight_state_enum.F2_stBLINKoff:
+        strInstructions := 'INST_WAIT';
+
+
+    trafficLight_state_enum.F1_stYELLOW,
+    trafficLight_state_enum.F1_stRED,
+    trafficLight_state_enum.F1_stGREEN:
+        strInstructions := 'INST_NORMAL';
+
+
+    trafficLight_state_enum.F6_stYELLOW:
+        strInstructions := 'INST_SETUP_Y';
+
+
+    trafficLight_state_enum.F6_stRED:
+        strInstructions := 'INST_SETUP_R';
+
+
+    trafficLight_state_enum.F6_stGREEN:
+        strInstructions := 'INST_SETUP_G';
+
+    ELSE
+        strInstructions := ''; 
+
+END_CASE]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="time2string" Id="{e484266a-2da8-4ee3-9c2f-ec11b5a2d589}">
+      <Declaration><![CDATA[METHOD time2string : STRING
+VAR_INPUT
+	timex : TIME;
+	
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[time2string := DWORD_TO_STRING(TIME_TO_DWORD( timex) / 1000);]]></ST>
+      </Implementation>
+    </Method>
   </POU>
 </TcPlcObject>

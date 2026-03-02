@@ -34,11 +34,14 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="4" Priority="30" CycleTime="2000000" AmsPort="351" DisableFpExceptions="true" AdtTasks="true">
+					<Name>VISU_TASK</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{8ADE7452-3742-4D17-8CAE-9FC0A4A01F6C}" Name="ourPLC" PrjFilePath="ourPLC\ourPLC.plcproj" TmcFilePath="ourPLC\ourPLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{62C55A20-5753-5E06-D37C-D1ED2FB8CA2E}" TmcPath="ourPLC\ourPLC.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{7C53FA7C-27DD-4E0C-FE12-6B50FD61BB67}" TmcPath="ourPLC\ourPLC.tmc">
 					<Name>ourPLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -59,19 +62,23 @@
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>MAIN.mytrafficlight.inputs.iRed</Name>
+							<Name>MAIN.capacitive</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.mytrafficlight.inputs.iGreen</Name>
+							<Name>MAIN.mytrafficlight.inputs.iRedINPUT</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.mytrafficlight.inputs.iSwitchOn</Name>
+							<Name>MAIN.mytrafficlight.inputs.iGreenINPUT</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>MAIN.mytrafficlight.inputs.iSwitchOff</Name>
+							<Name>MAIN.mytrafficlight.inputs.iSwitchOnINPUT</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.mytrafficlight.inputs.iSwitchOffINPUT</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -93,9 +100,19 @@
 							<Priority>20</Priority>
 							<CycleTime>10000000</CycleTime>
 						</Context>
+						<Context>
+							<Id>1</Id>
+							<Name>VISU_TASK</Name>
+							<ManualConfig>
+								<OTCID>#x02010040</OTCID>
+							</ManualConfig>
+							<Priority>30</Priority>
+							<CycleTime>200000000</CycleTime>
+						</Context>
 					</Contexts>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+						<TaskPouOid Prio="30" OTCID="#x08502002"/>
 					</TaskPouOids>
 				</Instance>
 			</Project>
@@ -561,10 +578,11 @@
 				<Link VarA="PlcTask Outputs^MAIN.mytrafficlight.outputs.YELLOWlight" VarB="Channel 3^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 2 (EtherCAT)^Term 1 (EK1100)^Term 5 (EL1008)">
-				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iGreen" VarB="Channel 5^Input"/>
-				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iRed" VarB="Channel 7^Input"/>
-				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iSwitchOff" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iSwitchOn" VarB="Channel 3^Input"/>
+				<Link VarA="PlcTask Inputs^MAIN.capacitive" VarB="Channel 2^Input"/>
+				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iGreenINPUT" VarB="Channel 5^Input"/>
+				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iRedINPUT" VarB="Channel 7^Input"/>
+				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iSwitchOffINPUT" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^MAIN.mytrafficlight.inputs.iSwitchOnINPUT" VarB="Channel 3^Input"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
